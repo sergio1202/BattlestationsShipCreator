@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ships>
+  <Ship name="Freighter" species="" size="5" damageSize="5">
+    <Modules>
+      <Module name="tractor" rotation="0" location="9" />
+      <Module name="hyperdrive" rotation="0" location="10" />
+      <Module name="helm" rotation="0" location="11" />
+      <Module name="cargo_bay" rotation="0" location="15" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="cargo_bay" rotation="0" location="16" />
+      <Module name="cargo_bay" rotation="0" location="19" />
+      <Module name="cargo_bay" rotation="0" location="18" />
+      <Module name="cargo_bay" rotation="0" location="23" />
+      <Module name="cargo_bay" rotation="0" location="22" />
+      <Module name="cargo_bay" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="cargo_bay" rotation="0" location="26" />
+      <Module name="cargo_bay" rotation="0" location="29" />
+      <Module name="life_support" rotation="0" location="31" />
+      <Module name="cargo_bay" rotation="0" location="30" />
+      <Module name="cargo_bay" rotation="0" location="32" />
+      <Module name="cargo_bay" rotation="0" location="33" />
+      <Module name="life_support" rotation="0" location="38" />
+      <Module name="cargo_bay" rotation="0" location="39" />
+      <Module name="cargo_bay" rotation="0" location="36" />
+      <Module name="cargo_bay" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="43" />
+      <Module name="cargo_bay" rotation="0" location="40" />
+      <Module name="engine" rotation="0" location="46" />
+      <Module name="engine" rotation="0" location="47" />
+      <Module name="engine" rotation="0" location="44" />
+    </Modules>
+  </Ship>
+  <Ship name="Skiff" species="" size="3" damageSize="3">
+    <Modules>
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="engine" rotation="0" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Shuttle" species="" size="4" damageSize="4">
+    <Modules>
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="cannon" rotation="0" location="23" />
+      <Module name="science" rotation="270" location="25" />
+      <Module name="hyperdrive" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="31" />
+    </Modules>
+  </Ship>  
+  <Ship name="Outpost" species="" size="5" damageSize="5">
+    <Modules>
+      <Module name="cannon" rotation="0" location="17" />
+      <Module name="engine" rotation="180" location="16" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="engine" rotation="270" location="18" />
+      <Module name="cannon" rotation="270" location="23" />
+      <Module name="cannon" rotation="90" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="cannon" rotation="180" location="31" />
+      <Module name="engine" rotation="90" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Cargo Transport" species="" size="8" damageSize="8">
+    <Modules>
+      <Module name="cargo_bay" rotation="0" location="32" />
+      <Module name="cargo_bay" rotation="0" location="33" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="teleporter" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="16" />
+      <Module name="life_support" rotation="0" location="18" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="science" rotation="180" location="22" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="hyperdrive" rotation="180" location="26" />
+      <Module name="cargo_bay" rotation="0" location="29" />
+      <Module name="tractor" rotation="180" location="31" />
+      <Module name="cargo_bay" rotation="0" location="30" />
+    </Modules>
+  </Ship>  
+<Ship name="Starbase" species="" size="7" damageSize="7">
+    <Modules>
+      <Module name="engine" rotation="0" location="34" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="engine" rotation="0" location="33" />
+      <Module name="missile_bay" rotation="0" location="14" />
+      <Module name="science" rotation="270" location="15" />
+      <Module name="cannon" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="16" />
+      <Module name="tractor" rotation="0" location="19" />
+      <Module name="cargo_bay" rotation="0" location="18" />
+      <Module name="life_support" rotation="0" location="21" />
+      <Module name="life_support" rotation="0" location="20" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="life_support" rotation="0" location="22" />
+      <Module name="cargo_bay" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="27" />
+      <Module name="cargo_bay" rotation="0" location="26" />
+      <Module name="engine" rotation="0" location="29" />
+      <Module name="engine" rotation="0" location="28" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Starlab" species="" size="7" damageSize="7">
+    <Modules>
+      <Module name="engine" rotation="0" location="34" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="engine" rotation="0" location="33" />
+      <Module name="missile_bay" rotation="0" location="14" />
+      <Module name="science" rotation="270" location="15" />
+      <Module name="cannon" rotation="0" location="17" />
+      <Module name="science" rotation="270" location="16" />
+      <Module name="tractor" rotation="0" location="19" />
+      <Module name="science" rotation="270" location="18" />
+      <Module name="life_support" rotation="0" location="21" />
+      <Module name="cargo_bay" rotation="0" location="20" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="teleporter" rotation="0" location="22" />
+      <Module name="teleporter" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="27" />
+      <Module name="life_support" rotation="0" location="26" />
+      <Module name="engine" rotation="0" location="29" />
+      <Module name="engine" rotation="0" location="28" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Leviathan" species="" size="10" damageSize="10">
+    <Modules>
+      <Module name="cannon" rotation="90" location="34" />
+      <Module name="cannon" rotation="0" location="1" />
+      <Module name="life_support" rotation="0" location="32" />
+      <Module name="hyperdrive" rotation="180" location="33" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="cannon" rotation="0" location="5" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="missile_bay" rotation="270" location="8" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="life_support" rotation="0" location="10" />
+      <Module name="helm" rotation="0" location="11" />
+      <Module name="missile_bay" rotation="90" location="12" />
+      <Module name="hull_stabilizer" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="16" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="teleporter" rotation="0" location="23" />
+      <Module name="science" rotation="0" location="25" />
+      <Module name="cargo_bay" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="29" />
+      <Module name="cannon" rotation="270" location="28" />
+      <Module name="tractor" rotation="180" location="31" />
+      <Module name="life_support" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Human" size="5" damageSize="5">
+    <Modules>
+      <Module name="science" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="32" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="cannon" rotation="0" location="23" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="hyperdrive" rotation="180" location="25" />
+      <Module name="engine" rotation="0" location="24" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="missile_bay" rotation="270" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Human" size="6" damageSize="6">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="32" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="science" rotation="270" location="23" />
+      <Module name="cannon" rotation="270" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="missile_bay" rotation="90" location="25" />
+      <Module name="teleporter" rotation="0" location="24" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="cannon" rotation="90" location="40" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="hyperdrive" rotation="270" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Destroyer" species="Human" size="7" damageSize="7">
+    <Modules>
+      <Module name="life_support" rotation="0" location="32" />
+      <Module name="cannon" rotation="0" location="3" />
+      <Module name="tractor" rotation="0" location="33" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="missile_bay" rotation="270" location="10" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="teleporter" rotation="0" location="23" />
+      <Module name="helm" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="cannon" rotation="270" location="29" />
+      <Module name="science" rotation="90" location="31" />
+      <Module name="hyperdrive" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Human" size="8">
+    <Modules>
+      <Module name="tractor" rotation="90" location="32" />
+      <Module name="cannon" rotation="0" location="3" />
+      <Module name="life_support" rotation="0" location="38" />
+      <Module name="teleporter" rotation="0" location="39" />
+      <Module name="cannon" rotation="270" location="36" />
+      <Module name="life_support" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="43" />
+      <Module name="science" rotation="0" location="40" />
+      <Module name="missile_bay" rotation="270" location="10" />
+      <Module name="engine" rotation="0" location="46" />
+      <Module name="engine" rotation="0" location="47" />
+      <Module name="engine" rotation="0" location="44" />
+      <Module name="missile_bay" rotation="90" location="17" />
+      <Module name="helm" rotation="0" location="23" />
+      <Module name="cannon" rotation="90" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="hyperdrive" rotation="270" location="31" />
+      <Module name="life_support" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Human" size="9">
+    <Modules>
+      <Module name="life_support" rotation="90" location="32" />
+      <Module name="tractor" rotation="90" location="33" />
+      <Module name="cannon" rotation="0" location="3" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="teleporter" rotation="0" location="10" />
+      <Module name="helm" rotation="0" location="11" />
+      <Module name="hyperdrive" rotation="0" location="17" />
+      <Module name="teleporter" rotation="0" location="16" />
+      <Module name="science" rotation="0" location="18" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="cannon" rotation="270" location="22" />
+      <Module name="life_support" rotation="90" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="cannon" rotation="90" location="26" />
+      <Module name="missile_bay" rotation="270" location="29" />
+      <Module name="missile_bay" rotation="180" location="31" />
+      <Module name="life_support" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Tentac" size="5">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="engine" rotation="90" location="16" />
+      <Module name="hyperdrive" rotation="270" location="32" />
+      <Module name="cannon" rotation="0" location="18" />
+      <Module name="engine" rotation="90" location="23" />
+      <Module name="science" rotation="0" location="25" />
+      <Module name="missile_bay" rotation="0" location="10" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="helm" rotation="270" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Tentac" size="6">
+    <Modules>
+      <Module name="cannon" rotation="0" location="17" />
+      <Module name="engine" rotation="180" location="16" />
+      <Module name="life_support" rotation="0" location="32" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="science" rotation="90" location="38" />
+      <Module name="helm" rotation="90" location="39" />
+      <Module name="engine" rotation="90" location="36" />
+      <Module name="cannon" rotation="270" location="22" />
+      <Module name="hyperdrive" rotation="0" location="37" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="engine" rotation="90" location="29" />
+      <Module name="tractor" rotation="270" location="15" />
+    </Modules>
+  </Ship>
+  <Ship name="Destroyer" species="Tentac" size="7">
+    <Modules>
+      <Module name="cannon" rotation="90" location="33" />
+      <Module name="helm" rotation="180" location="38" />
+      <Module name="cannon" rotation="180" location="39" />
+      <Module name="tractor" rotation="270" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="missile_bay" rotation="90" location="40" />
+      <Module name="science" rotation="0" location="10" />
+      <Module name="engine" rotation="90" location="15" />
+      <Module name="hyperdrive" rotation="270" location="17" />
+      <Module name="cannon" rotation="0" location="16" />
+      <Module name="life_support" rotation="0" location="19" />
+      <Module name="engine" rotation="180" location="18" />
+      <Module name="engine" rotation="90" location="22" />
+      <Module name="life_support" rotation="0" location="26" />
+      <Module name="cannon" rotation="270" location="29" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Tentac" size="8">
+    <Modules>
+      <Module name="science" rotation="180" location="2" />
+      <Module name="cannon" rotation="90" location="33" />
+      <Module name="helm" rotation="180" location="38" />
+      <Module name="cannon" rotation="0" location="4" />
+      <Module name="missile_bay" rotation="180" location="39" />
+      <Module name="tractor" rotation="180" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="teleporter" rotation="0" location="8" />
+      <Module name="hyperdrive" rotation="270" location="9" />
+      <Module name="missile_bay" rotation="180" location="40" />
+      <Module name="cannon" rotation="0" location="10" />
+      <Module name="life_support" rotation="0" location="11" />
+      <Module name="cannon" rotation="90" location="12" />
+      <Module name="life_support" rotation="0" location="15" />
+      <Module name="engine" rotation="270" location="19" />
+      <Module name="life_support" rotation="0" location="22" />
+      <Module name="engine" rotation="270" location="26" />
+      <Module name="engine" rotation="90" location="29" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Tentac" size="9">
+    <Modules>
+      <Module name="life_support" rotation="0" location="32" />
+      <Module name="engine" rotation="270" location="33" />
+      <Module name="science" rotation="0" location="3" />
+      <Module name="helm" rotation="180" location="38" />
+      <Module name="cannon" rotation="180" location="39" />
+      <Module name="missile_bay" rotation="180" location="36" />
+      <Module name="life_support" rotation="0" location="37" />
+      <Module name="tractor" rotation="0" location="8" />
+      <Module name="engine" rotation="180" location="9" />
+      <Module name="missile_bay" rotation="90" location="40" />
+      <Module name="life_support" rotation="0" location="10" />
+      <Module name="teleporter" rotation="0" location="11" />
+      <Module name="cannon" rotation="90" location="12" />
+      <Module name="engine" rotation="90" location="15" />
+      <Module name="teleporter" rotation="0" location="16" />
+      <Module name="cannon" rotation="90" location="19" />
+      <Module name="hyperdrive" rotation="270" location="18" />
+      <Module name="engine" rotation="90" location="22" />
+      <Module name="helm" rotation="90" location="26" />
+      <Module name="cannon" rotation="270" location="29" />
+      <Module name="life_support" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Canosian" size="5">
+    <Modules>
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="engine" rotation="0" location="33" />
+      <Module name="missile_bay" rotation="0" location="23" />
+      <Module name="science" rotation="270" location="25" />
+      <Module name="hyperdrive" rotation="0" location="24" />
+      <Module name="cannon" rotation="270" location="29" />
+      <Module name="life_support" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Canosian" size="6">
+    <Modules>
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="cannon" rotation="90" location="34" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="science" rotation="0" location="18" />
+      <Module name="missile_bay" rotation="180" location="33" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="teleporter" rotation="0" location="25" />
+      <Module name="hyperdrive" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="26" />
+      <Module name="cannon" rotation="270" location="29" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Destroyer" species="Canosian" size="7">
+    <Modules>
+      <Module name="cannon" rotation="90" location="34" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="engine" rotation="0" location="33" />
+      <Module name="teleporter" rotation="0" location="17" />
+      <Module name="helm" rotation="0" location="16" />
+      <Module name="science" rotation="0" location="18" />
+      <Module name="hull_stabilizer" rotation="0" location="23" />
+      <Module name="life_support" rotation="0" location="22" />
+      <Module name="hyperdrive" rotation="270" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="missile_bay" rotation="0" location="26" />
+      <Module name="missile_bay" rotation="180" location="29" />
+      <Module name="cannon" rotation="270" location="28" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Canosian" size="8">
+    <Modules>
+      <Module name="cannon" rotation="90" location="34" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="missile_bay" rotation="180" location="33" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="science" rotation="270" location="10" />
+      <Module name="hyperdrive" rotation="180" location="11" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="16" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="tractor" rotation="0" location="22" />
+      <Module name="teleporter" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="26" />
+      <Module name="engine" rotation="0" location="29" />
+      <Module name="cannon" rotation="270" location="28" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Canosian" size="9">
+    <Modules>
+      <Module name="cannon" rotation="270" location="35" />
+      <Module name="life_support" rotation="0" location="32" />
+      <Module name="helm" rotation="0" location="33" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="missile_bay" rotation="180" location="40" />
+      <Module name="science" rotation="270" location="10" />
+      <Module name="cannon" rotation="90" location="41" />
+      <Module name="hyperdrive" rotation="180" location="11" />
+      <Module name="teleporter" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="16" />
+      <Module name="teleporter" rotation="0" location="18" />
+      <Module name="missile_bay" rotation="270" location="23" />
+      <Module name="missile_bay" rotation="90" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="tractor" rotation="0" location="29" />
+      <Module name="life_support" rotation="0" location="31" />
+      <Module name="life_support" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Silicoid" size="5">
+    <Modules>
+      <Module name="life_support" rotation="0" location="16" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="hyperdrive" rotation="90" location="18" />
+      <Module name="engine" rotation="0" location="33" />
+      <Module name="missile_bay" rotation="270" location="23" />
+      <Module name="science" rotation="0" location="25" />
+      <Module name="helm" rotation="0" location="24" />
+      <Module name="cannon" rotation="270" location="29" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Silicoid" size="6">
+    <Modules>
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="16" />
+      <Module name="science" rotation="0" location="18" />
+      <Module name="engine" rotation="0" location="33" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="cannon" rotation="270" location="22" />
+      <Module name="hyperdrive" rotation="270" location="25" />
+      <Module name="life_support" rotation="0" location="9" />
+      <Module name="engine" rotation="0" location="24" />
+      <Module name="teleporter" rotation="0" location="11" />
+      <Module name="cannon" rotation="90" location="26" />
+      <Module name="engine" rotation="0" location="29" />
+    </Modules>
+  </Ship>
+  <Ship name="Destroyer" species="Silicoid" size="7">
+    <Modules>
+      <Module name="cannon" rotation="90" location="34" />
+      <Module name="engine" rotation="0" location="33" />
+      <Module name="missile_bay" rotation="0" location="9" />
+      <Module name="teleporter" rotation="0" location="11" />
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="16" />
+      <Module name="science" rotation="0" location="18" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="life_support" rotation="0" location="22" />
+      <Module name="engine" rotation="0" location="25" />
+      <Module name="hyperdrive" rotation="0" location="24" />
+      <Module name="tractor" rotation="90" location="26" />
+      <Module name="engine" rotation="0" location="29" />
+      <Module name="cannon" rotation="270" location="28" />
+      <Module name="engine" rotation="0" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Silicoid" size="8">
+    <Modules>
+      <Module name="cannon" rotation="270" location="35" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="tractor" rotation="90" location="33" />
+      <Module name="life_support" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="missile_bay" rotation="270" location="9" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="cannon" rotation="90" location="41" />
+      <Module name="teleporter" rotation="0" location="11" />
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="16" />
+      <Module name="teleporter" rotation="0" location="18" />
+      <Module name="hyperdrive" rotation="0" location="23" />
+      <Module name="science" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="29" />
+      <Module name="life_support" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Silicoid" size="9">
+    <Modules>
+      <Module name="cannon" rotation="270" location="35" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="helm" rotation="0" location="2" />
+      <Module name="tractor" rotation="90" location="33" />
+      <Module name="life_support" rotation="0" location="38" />
+      <Module name="helm" rotation="0" location="4" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="missile_bay" rotation="270" location="9" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="missile_bay" rotation="0" location="10" />
+      <Module name="cannon" rotation="90" location="41" />
+      <Module name="missile_bay" rotation="90" location="11" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="teleporter" rotation="0" location="16" />
+      <Module name="teleporter" rotation="0" location="18" />
+      <Module name="hyperdrive" rotation="0" location="23" />
+      <Module name="science" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="missile_bay" rotation="0" location="29" />
+      <Module name="life_support" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Xeloxian" size="5">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="science" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="23" />
+      <Module name="cannon" rotation="270" location="22" />
+      <Module name="engine" rotation="0" location="25" />
+      <Module name="teleporter" rotation="0" location="24" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="engine" rotation="0" location="26" />
+      <Module name="hyperdrive" rotation="90" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Xeloxian" size="6">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="helm" rotation="0" location="3" />
+      <Module name="cannon" rotation="270" location="21" />
+      <Module name="science" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="23" />
+      <Module name="teleporter" rotation="0" location="22" />
+      <Module name="engine" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="10" />
+      <Module name="cannon" rotation="90" location="27" />
+      <Module name="engine" rotation="0" location="26" />
+      <Module name="hyperdrive" rotation="90" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Destroyer" species="Xeloxian" size="7">
+    <Modules>
+      <Module name="life_support" rotation="0" location="34" />
+      <Module name="science" rotation="0" location="38" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="cannon" rotation="0" location="14" />
+      <Module name="teleporter" rotation="0" location="17" />
+      <Module name="life_support" rotation="270" location="21" />
+      <Module name="cannon" rotation="0" location="20" />
+      <Module name="engine" rotation="0" location="23" />
+      <Module name="engine" rotation="0" location="22" />
+      <Module name="engine" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="tractor" rotation="90" location="27" />
+      <Module name="engine" rotation="0" location="26" />
+      <Module name="cannon" rotation="180" location="28" />
+      <Module name="hyperdrive" rotation="90" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Xeloxian" size="9">
+    <Modules>
+      <Module name="cannon" rotation="180" location="34" />
+      <Module name="helm" rotation="0" location="3" />
+      <Module name="science" rotation="0" location="38" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="teleporter" rotation="0" location="10" />
+      <Module name="life_support" rotation="0" location="11" />
+      <Module name="engine" rotation="0" location="46" />
+      <Module name="engine" rotation="0" location="44" />
+      <Module name="cannon" rotation="0" location="14" />
+      <Module name="missile_bay" rotation="180" location="45" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="21" />
+      <Module name="cannon" rotation="0" location="20" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="engine" rotation="0" location="22" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="tractor" rotation="90" location="27" />
+      <Module name="engine" rotation="0" location="26" />
+      <Module name="cannon" rotation="180" location="28" />
+      <Module name="hyperdrive" rotation="90" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Xeloxian" size="8">
+    <Modules>
+      <Module name="cannon" rotation="180" location="34" />
+      <Module name="science" rotation="0" location="38" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="engine" rotation="0" location="46" />
+      <Module name="engine" rotation="0" location="44" />
+      <Module name="cannon" rotation="0" location="14" />
+      <Module name="engine" rotation="0" location="45" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="21" />
+      <Module name="cannon" rotation="0" location="20" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="engine" rotation="0" location="22" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="teleporter" rotation="0" location="27" />
+      <Module name="tractor" rotation="0" location="26" />
+      <Module name="cannon" rotation="180" location="28" />
+      <Module name="hyperdrive" rotation="90" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Zoallan" size="5">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="16" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="science" rotation="0" location="24" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="hyperdrive" rotation="270" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Zoallan" size="6">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="cannon" rotation="0" location="3" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="missile_bay" rotation="270" location="23" />
+      <Module name="science" rotation="0" location="25" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="hyperdrive" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="10" />
+      <Module name="missile_bay" rotation="90" location="11" />
+      <Module name="hull_stabilizer" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Destroyer" species="Zoallan" size="7">
+    <Modules>
+      <Module name="tractor" rotation="90" location="32" />
+      <Module name="cannon" rotation="0" location="3" />
+      <Module name="hull_stabilizer" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="missile_bay" rotation="270" location="9" />
+      <Module name="life_support" rotation="0" location="10" />
+      <Module name="helm" rotation="0" location="11" />
+      <Module name="engine" rotation="0" location="45" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="missile_bay" rotation="270" location="16" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="science" rotation="0" location="24" />
+      <Module name="hyperdrive" rotation="270" location="31" />
+      <Module name="missile_bay" rotation="270" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Zoallan" size="8">
+    <Modules>
+      <Module name="teleporter" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="life_support" rotation="0" location="37" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="cannon" rotation="0" location="10" />
+      <Module name="engine" rotation="0" location="44" />
+      <Module name="engine" rotation="0" location="45" />
+      <Module name="missile_bay" rotation="270" location="15" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="16" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="hyperdrive" rotation="90" location="23" />
+      <Module name="missile_bay" rotation="270" location="22" />
+      <Module name="missile_bay" rotation="90" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="science" rotation="0" location="31" />
+      <Module name="tractor" rotation="270" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Zoallan" size="9">
+    <Modules>
+      <Module name="tractor" rotation="90" location="32" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="helm" rotation="0" location="9" />
+      <Module name="cannon" rotation="90" location="40" />
+      <Module name="missile_bay" rotation="0" location="10" />
+      <Module name="helm" rotation="0" location="11" />
+      <Module name="cannon" rotation="0" location="15" />
+      <Module name="hull_stabilizer" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="16" />
+      <Module name="missile_bay" rotation="90" location="19" />
+      <Module name="life_support" rotation="0" location="18" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="missile_bay" rotation="270" location="22" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="hyperdrive" rotation="90" location="24" />
+      <Module name="missile_bay" rotation="90" location="26" />
+      <Module name="teleporter" rotation="0" location="31" />
+      <Module name="science" rotation="180" location="30" />
+    </Modules>
+  </Ship>
+ 
+  <Ship name="Scout" species="Whistler" size="5">
+    <Modules>
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="cannon" rotation="0" location="16" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="hyperdrive" rotation="90" location="18" />
+      <Module name="mine_layer" rotation="90" location="23" />
+      <Module name="science" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Whistler" size="6">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="teleporter" rotation="0" location="16" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="science" rotation="180" location="23" />
+      <Module name="hyperdrive" rotation="180" location="25" />
+      <Module name="fighter_bay" rotation="0" location="9" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="cannon" rotation="0" location="11" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Destroyer" species="Whistler" size="7">
+    <Modules>
+      <Module name="fighter_bay" rotation="90" location="32" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="cannon" rotation="270" location="9" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="cannon" rotation="0" location="11" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="hyperdrive" rotation="90" location="16" />
+      <Module name="missile_bay" rotation="90" location="18" />
+      <Module name="science" rotation="180" location="23" />
+      <Module name="teleporter" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="hull_stabilizer" rotation="0" location="31" />
+      <Module name="mine_layer" rotation="90" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Whistler" size="8">
+    <Modules>
+      <Module name="tractor" rotation="90" location="32" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="mine_layer" rotation="180" location="9" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="cannon" rotation="0" location="15" />
+      <Module name="hull_stabilizer" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="16" />
+      <Module name="cannon" rotation="0" location="18" />
+      <Module name="teleporter" rotation="0" location="23" />
+      <Module name="science" rotation="180" location="22" />
+      <Module name="missile_bay" rotation="90" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="fighter_bay" rotation="270" location="29" />
+      <Module name="hyperdrive" rotation="270" location="31" />
+      <Module name="life_support" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Whistler" size="9">
+    <Modules>
+      <Module name="hull_stabilizer" rotation="0" location="32" />
+      <Module name="tractor" rotation="90" location="33" />
+      <Module name="fighter_bay" rotation="180" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="cannon" rotation="0" location="10" />
+      <Module name="cannon" rotation="0" location="15" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="fighter_bay" rotation="0" location="16" />
+      <Module name="cannon" rotation="0" location="19" />
+      <Module name="helm" rotation="0" location="18" />
+      <Module name="teleporter" rotation="0" location="23" />
+      <Module name="science" rotation="180" location="22" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="missile_bay" rotation="90" location="26" />
+      <Module name="mine_layer" rotation="90" location="29" />
+      <Module name="life_support" rotation="0" location="31" />
+      <Module name="hyperdrive" rotation="270" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Trundlian" size="5">
+    <Modules>
+      <Module name="helm" rotation="0" location="17" />
+      <Module name="fusion_cannon" rotation="270" location="16" />
+      <Module name="science" rotation="0" location="32" />
+      <Module name="gravity_lance" rotation="90" location="18" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="hyperdrive" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+<Ship name="Frigate" species="Trundlian" size="6">
+    <Modules>
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="science" rotation="0" location="32" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="cannon" rotation="90" location="25" />
+      <Module name="fusion_cannon" rotation="270" location="9" />
+      <Module name="teleporter" rotation="0" location="24" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="gravity_lance" rotation="90" location="11" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="hyperdrive" rotation="0" location="30" />
+    </Modules>
+  </Ship>  
+  <Ship name="Destroyer" species="Trundlian" size="7">
+    <Modules>
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="cannon" rotation="90" location="33" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="life_support" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="43" />
+      <Module name="fusion_cannon" rotation="270" location="9" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="hyperdrive" rotation="0" location="40" />
+      <Module name="gravity_lance" rotation="90" location="11" />
+      <Module name="engine" rotation="0" location="47" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="science" rotation="0" location="24" />
+      <Module name="fusion_cannon" rotation="270" location="29" />
+      <Module name="hull_stabilizer" rotation="0" location="31" />
+      <Module name="teleporter" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Trundlian" size="8">
+    <Modules>
+      <Module name="hull_stabilizer" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="fusion_cannon" rotation="270" location="36" />
+      <Module name="teleporter" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="43" />
+      <Module name="fusion_cannon" rotation="270" location="9" />
+      <Module name="tractor" rotation="90" location="40" />
+      <Module name="helm" rotation="0" location="10" />
+      <Module name="gravity_lance" rotation="90" location="11" />
+      <Module name="engine" rotation="0" location="47" />
+      <Module name="engine" rotation="0" location="45" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="gravity_lance" rotation="270" location="22" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="hyperdrive" rotation="0" location="24" />
+      <Module name="cannon" rotation="90" location="26" />
+      <Module name="science" rotation="0" location="31" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Trundlian" size="9">
+    <Modules>
+      <Module name="fusion_cannon" rotation="270" location="2" />
+      <Module name="science" rotation="0" location="32" />
+      <Module name="helm" rotation="0" location="3" />
+      <Module name="hull_stabilizer" rotation="0" location="38" />
+      <Module name="tractor" rotation="90" location="4" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="cannon" rotation="270" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="fusion_cannon" rotation="270" location="43" />
+      <Module name="tractor" rotation="90" location="40" />
+      <Module name="life_support" rotation="0" location="10" />
+      <Module name="engine" rotation="0" location="47" />
+      <Module name="engine" rotation="0" location="45" />
+      <Module name="life_support" rotation="0" location="17" />
+      <Module name="teleporter" rotation="0" location="23" />
+      <Module name="gravity_lance" rotation="270" location="22" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="cannon" rotation="90" location="26" />
+      <Module name="teleporter" rotation="0" location="31" />
+      <Module name="hyperdrive" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Scout" species="Fungaloid" size="5">
+    <Modules>
+      <Module name="science" rotation="180" location="17" />
+      <Module name="engine" rotation="0" location="32" />
+      <Module name="hyperdrive" rotation="180" location="18" />
+      <Module name="life_support" rotation="0" location="23" />
+      <Module name="damage_control" rotation="0" location="25" />
+      <Module name="sick_bay" rotation="270" location="24" />
+      <Module name="helm" rotation="0" location="11" />
+      <Module name="engine" rotation="0" location="29" />
+      <Module name="engine" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Frigate" species="Fungaloid" size="6">
+    <Modules>
+      <Module name="science" rotation="180" location="17" />
+      <Module name="damage_control" rotation="0" location="32" />
+      <Module name="hyperdrive" rotation="180" location="18" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="sick_bay" rotation="270" location="23" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="0" location="24" />
+      <Module name="helm" rotation="0" location="11" />
+      <Module name="tractor" rotation="180" location="31" />
+      <Module name="life_support" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Explorer" species="Fungaloid" size="7">
+    <Modules>
+      <Module name="hull_stabilizer" rotation="0" location="32" />
+      <Module name="damage_control" rotation="90" location="33" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="tractor" rotation="180" location="39" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="helm" rotation="0" location="12" />
+      <Module name="hyperdrive" rotation="180" location="19" />
+      <Module name="science" rotation="180" location="18" />
+      <Module name="teleporter" rotation="0" location="25" />
+      <Module name="sick_bay" rotation="270" location="24" />
+      <Module name="life_support" rotation="0" location="26" />
+      <Module name="life_support" rotation="0" location="31" />
+      <Module name="cargo_bay" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Cruiser" species="Fungaloid" size="8">
+    <Modules>
+      <Module name="cannon" rotation="270" location="35" />
+      <Module name="missile_bay" rotation="90" location="33" />
+      <Module name="helm" rotation="0" location="5" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="engine" rotation="0" location="40" />
+      <Module name="science" rotation="180" location="11" />
+      <Module name="hyperdrive" rotation="180" location="12" />
+      <Module name="sick_bay" rotation="270" location="17" />
+      <Module name="life_support" rotation="0" location="19" />
+      <Module name="teleporter" rotation="0" location="18" />
+      <Module name="cargo_bay" rotation="0" location="23" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="hull_stabilizer" rotation="270" location="24" />
+      <Module name="life_support" rotation="0" location="26" />
+      <Module name="tractor" rotation="0" location="29" />
+      <Module name="engine" rotation="0" location="31" />
+      <Module name="damage_control" rotation="0" location="30" />
+    </Modules>
+  </Ship>
+  <Ship name="Dreadnought" species="Fungaloid" size="9">
+    <Modules>
+      <Module name="cannon" rotation="270" location="35" />
+      <Module name="hyperdrive" rotation="270" location="32" />
+      <Module name="life_support" rotation="0" location="33" />
+      <Module name="engine" rotation="0" location="38" />
+      <Module name="engine" rotation="0" location="39" />
+      <Module name="cannon" rotation="0" location="5" />
+      <Module name="engine" rotation="0" location="36" />
+      <Module name="engine" rotation="0" location="37" />
+      <Module name="cargo_bay" rotation="0" location="40" />
+      <Module name="science" rotation="180" location="11" />
+      <Module name="missile_bay" rotation="90" location="12" />
+      <Module name="sick_bay" rotation="270" location="17" />
+      <Module name="missile_bay" rotation="90" location="19" />
+      <Module name="teleporter" rotation="0" location="18" />
+      <Module name="helm" rotation="0" location="23" />
+      <Module name="life_support" rotation="0" location="25" />
+      <Module name="life_support" rotation="0" location="24" />
+      <Module name="life_support" rotation="0" location="26" />
+      <Module name="tractor" rotation="0" location="29" />
+      <Module name="hull_stabilizer" rotation="0" location="31" />
+      <Module name="damage_control" rotation="90" location="30" />
+    </Modules>
+  </Ship>
+</Ships>
+
