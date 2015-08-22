@@ -32,28 +32,28 @@ public enum ModuleFactory
 
         addModule("cannon", "Cannon", "combat");
         addModule("cargo_bay", "Cargo Bay", "general");
-        addModule("std_cargo_bay_one", "Hull Stabilizer Cargo Bay", "general");
-        addModule("std_cargo_bay_two", "Extra Life Support Cargo Bay", "general");
-        addModule("tractor_cargo_bay", "Tractor Cargo Bay", "general");
-        addModule("bot_cargo_bay", "Bot Cargo Bay", "general");
-        addModule("cargo_pod", "Cargo Pod", "general");
+        addModule("std_cargo_bay_one", "Hull Stabilizer Cargo Bay", "general",false);
+        addModule("std_cargo_bay_two", "Extra Life Support Cargo Bay", "general",false);
+        addModule("tractor_cargo_bay", "Tractor Cargo Bay", "general",false);
+        addModule("bot_cargo_bay", "Bot Cargo Bay", "general",false);
+        addModule("cargo_pod", "Cargo Pod", "general",false);
         addModule("cloaking_device", "Cloaking Device", "science");
-        addModule("damage_control", "Damage Control", "engineering");
+        addModule("damage_control", "Damage Control", "engineering",false);
         addModule("engine", "Engine", "engineering");
-        addModule("fighter_bay", "Fighter Bay", "pilotting");
-        addModule("fusion_cannon", "Fusion Canon", "combat");
-        addModule("gravity_lance", "Gravity Lance", "combat");
+        addModule("fighter_bay", "Fighter Bay", "pilotting",false);
+        addModule("fusion_cannon", "Fusion Canon", "combat",false);
+        addModule("gravity_lance", "Gravity Lance", "combat",false);
         addModule("helm", "Helm", "pilotting");
         addModule("hyperdrive", "Hyperdrive", "science");
         addModule("life_support", "Life Support", "general");
         addModule("mine_layer", "Mine Layer", "engineering");
         addModule("missile_bay", "Missile Bay", "combat");
-        addModule("missile_pod", "Missile Pod", "combat");
+        addModule("missile_pod", "Missile Pod", "combat",false);
         addModule("science", "Science Bay", "science");
         addModule("sick_bay", "Sick Bay", "science");
         addModule("teleporter", "Teleporter", "science");
-        addModule("tractor", "Tractor Beam", "obsolete");
-        addModule("hull_stabilizer", "Hull Stabilizer", "obsolete");
+        addModule("tractor", "Tractor Beam", "obsolete",false);
+        addModule("hull_stabilizer", "Hull Stabilizer", "obsolete",false);
         nameMap.put(Module.BLANK, getBlankModule());
         processUserModules();
     }
@@ -64,10 +64,21 @@ public enum ModuleFactory
     }
 
     
+     
     private void addModule(String name, String description, String profession)
     {
+        addModule(name, description, profession, true);
+    }
+
+    private void addModule(String name, String description, String profession, boolean newEdition)
+    {
         professions.add(profession);
-        Module m = new InternalModule(name, 0, description, profession, "/com/ericski/Battlestations/Images/Modules/" + name + ".jpg");
+        
+        Module m;
+        if(newEdition)
+            m = new InternalModule(name, 0, description, profession, "/com/ericski/Battlestations/Images/Modules2/" + name + ".jpg");
+        else
+            m = new InternalModule(name, 0, description, profession, "/com/ericski/Battlestations/Images/Modules/" + name + ".jpg");
         nameMap.put(name, m);
     }
 
