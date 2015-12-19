@@ -16,7 +16,6 @@ import java.awt.font.FontRenderContext;
 import java.awt.font.TextLayout;
 import java.awt.geom.AffineTransform;
 import static java.awt.geom.AffineTransform.getRotateInstance;
-import static java.awt.geom.AffineTransform.getRotateInstance;
 import static java.awt.geom.AffineTransform.getTranslateInstance;
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;

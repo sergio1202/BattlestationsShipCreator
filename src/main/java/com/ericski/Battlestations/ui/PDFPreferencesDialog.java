@@ -1,18 +1,14 @@
 package com.ericski.Battlestations.ui;
 
 import com.ericski.Battlestations.PDFShipWriterOptions;
-import java.awt.BorderLayout;
 import static java.awt.BorderLayout.CENTER;
 import static java.awt.BorderLayout.PAGE_END;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.BorderFactory;
-import static javax.swing.BorderFactory.createEmptyBorder;
 import static javax.swing.BorderFactory.createEmptyBorder;
 import static javax.swing.BorderFactory.createTitledBorder;
-import javax.swing.Box;
 import static javax.swing.Box.createHorizontalGlue;
 import static javax.swing.Box.createRigidArea;
 import javax.swing.BoxLayout;
@@ -30,11 +26,9 @@ import javax.swing.JRadioButton;
 import javax.swing.JSlider;
 import static javax.swing.SwingConstants.HORIZONTAL;
 import static javax.swing.SwingUtilities.invokeLater;
-import javax.swing.UIManager;
 import static javax.swing.UIManager.getSystemLookAndFeelClassName;
 import static javax.swing.UIManager.setLookAndFeel;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.WindowConstants;
 
 public class PDFPreferencesDialog extends JDialog implements ActionListener
 {

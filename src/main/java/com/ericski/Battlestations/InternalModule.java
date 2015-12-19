@@ -3,7 +3,6 @@ package com.ericski.Battlestations;
 import java.awt.Image;
 import java.io.IOException;
 import java.io.InputStream;
-import javax.imageio.ImageIO;
 import static javax.imageio.ImageIO.read;
 import org.apache.logging.log4j.message.FormattedMessage;
 

@@ -1,12 +1,9 @@
 package com.ericski.graphics;
 
-import java.awt.Color;
 import static java.awt.Color.WHITE;
 import java.awt.Graphics2D;
-import java.awt.RenderingHints;
 import static java.awt.RenderingHints.KEY_INTERPOLATION;
 import static java.awt.RenderingHints.VALUE_INTERPOLATION_BICUBIC;
-import java.awt.Transparency;
 import static java.awt.Transparency.OPAQUE;
 import java.awt.geom.AffineTransform;
 import static java.awt.geom.AffineTransform.getTranslateInstance;

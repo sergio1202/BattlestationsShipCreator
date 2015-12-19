@@ -9,7 +9,6 @@ import javax.swing.JComponent;
 import javax.swing.JPopupMenu;
 import javax.swing.JSeparator;
 import javax.swing.JTextArea;
-import javax.swing.text.DefaultEditorKit;
 import static javax.swing.text.DefaultEditorKit.copyAction;
 import static javax.swing.text.DefaultEditorKit.cutAction;
 import static javax.swing.text.DefaultEditorKit.pasteAction;

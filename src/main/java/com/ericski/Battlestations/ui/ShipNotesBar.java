@@ -3,7 +3,6 @@ package com.ericski.Battlestations.ui;
 import java.awt.BorderLayout;
 import static java.awt.BorderLayout.CENTER;
 import static java.awt.BorderLayout.WEST;
-import java.awt.Color;
 import static java.awt.Color.BLACK;
 import static java.awt.Color.WHITE;
 import java.awt.Dimension;
@@ -12,17 +11,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.beans.PropertyChangeEvent;
-import javax.swing.Box;
 import static javax.swing.Box.createHorizontalStrut;
 import javax.swing.BoxLayout;
 import static javax.swing.BoxLayout.X_AXIS;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 import static javax.swing.SwingUtilities.invokeLater;
 import org.jdesktop.swingx.JXCollapsiblePane;
-import org.jdesktop.swingx.JXCollapsiblePane.Direction;
 import static org.jdesktop.swingx.JXCollapsiblePane.Direction.DOWN;
 
 public class ShipNotesBar extends JPanel

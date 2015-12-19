@@ -1,23 +1,19 @@
 package com.ericski.Battlestations.ui;
 
-import com.ericski.Battlestations.BattlestationColors;
 import static com.ericski.Battlestations.BattlestationColors.Combat;
 import static com.ericski.Battlestations.BattlestationColors.Engineering;
 import static com.ericski.Battlestations.BattlestationColors.Piloting;
 import static com.ericski.Battlestations.BattlestationColors.Science;
 import com.ericski.Battlestations.Module;
-import com.ericski.Battlestations.ModuleFactory;
 import static com.ericski.Battlestations.ModuleFactory.INSTANCE;
 import com.l2fprod.common.swing.JOutlookBar;
 import java.awt.Color;
 import java.awt.Dimension;
-import javax.swing.Box;
 import static javax.swing.Box.createVerticalStrut;
 import javax.swing.BoxLayout;
 import static javax.swing.BoxLayout.Y_AXIS;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
 
 public class ModuleSelectorBar extends JOutlookBar
 {

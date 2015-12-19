@@ -3,7 +3,6 @@ package com.ericski.Battlestations;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import static java.util.prefs.Preferences.userNodeForPackage;
-import org.apache.logging.log4j.LogManager;
 import static org.apache.logging.log4j.LogManager.getLogger;
 import org.apache.logging.log4j.Logger;
 

@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import javax.imageio.ImageIO;
 import static javax.imageio.ImageIO.read;
 import org.apache.logging.log4j.message.FormattedMessage;
 import org.jdom2.Document;
