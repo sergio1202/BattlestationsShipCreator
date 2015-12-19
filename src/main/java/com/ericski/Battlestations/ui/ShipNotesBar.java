@@ -23,108 +23,111 @@ import static org.jdesktop.swingx.JXCollapsiblePane.Direction.DOWN;
 
 public class ShipNotesBar extends JPanel
 {
-    private static final String TOGGLEACTION = "TOGGLEACTION";
+	private static final String TOGGLEACTION = "TOGGLEACTION";
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    ShipCreatorPanel parentPanel;
-    JButton hiderButton;
+	ShipCreatorPanel parentPanel;
+	JButton hiderButton;
 
-    JXCollapsiblePane modulePane;
-    JPanel hider;
+	JXCollapsiblePane modulePane;
+	JPanel hider;
 
-    boolean collapsed = true;
+	boolean collapsed = true;
 
-    @Override
-    public Dimension getPreferredSize()
-    {
-        if (collapsed)
-        {
-            return hider.getPreferredSize();
-        }
-        else
-        {
-            Dimension dim1 = hider.getPreferredSize();
-            Dimension dim2 = modulePane.getPreferredSize();
-
-            return new Dimension(dim1.width, dim1.height + dim2.height);
-        }
-    }
-
-    public ShipNotesBar(ShipCreatorPanel parentPanel)
-    {
-        super(new BorderLayout());
-        this.parentPanel = parentPanel;
-        hider = new JGradPanel(BLACK.brighter().brighter(), WHITE);
-        hider.setLayout(new BoxLayout(hider, X_AXIS));
-        hiderButton = new JButton("/\\");
-        hiderButton.setFont(hiderButton.getFont().deriveFont(6));
-        hiderButton.setMargin(new Insets(0, 0, 0, 0));
-        hider.add(hiderButton);
-        hider.add(createHorizontalStrut(5));
-        JLabel label = new JLabel("Ship Notes");
-        label.setForeground(WHITE);
-        hider.addMouseListener(new MouseAdapter()
-        {
-            @Override
-            public void mouseReleased(MouseEvent evt)
-            {
-                if (!evt.isPopupTrigger())
-                {
-                    showHideShipBar();
-                }
-            }
-        });
-        hider.add(label);
-        add(hider, WEST);
-        hiderButton.setActionCommand(TOGGLEACTION);
-        hiderButton.addActionListener((ActionEvent e) ->
+	@Override
+	public Dimension getPreferredSize()
+	{
+		if (collapsed)
 		{
-			String key = e.getActionCommand();
-			if (TOGGLEACTION.equals(key))
+			return hider.getPreferredSize();
+		}
+		else
+		{
+			Dimension dim1 = hider.getPreferredSize();
+			Dimension dim2 = modulePane.getPreferredSize();
+
+			return new Dimension(dim1.width, dim1.height + dim2.height);
+		}
+	}
+
+	public ShipNotesBar(ShipCreatorPanel parentPanel)
+	{
+		super(new BorderLayout());
+		this.parentPanel = parentPanel;
+		hider = new JGradPanel(BLACK.brighter().brighter(), WHITE);
+		hider.setLayout(new BoxLayout(hider, X_AXIS));
+		hiderButton = new JButton("/\\");
+		hiderButton.setFont(hiderButton.getFont().deriveFont(6));
+		hiderButton.setMargin(new Insets(0, 0, 0, 0));
+		hider.add(hiderButton);
+		hider.add(createHorizontalStrut(5));
+		JLabel label = new JLabel("Ship Notes");
+		label.setForeground(WHITE);
+		hider.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mouseReleased(MouseEvent evt)
 			{
-				showHideShipBar();
+				if (!evt.isPopupTrigger())
+				{
+					showHideShipBar();
+				}
 			}
 		});
-
-        //modulePane = new JPanel(new BorderLayout());
-        modulePane = new JXCollapsiblePane(DOWN);
-
-        modulePane.setLayout(new BorderLayout());
-        modulePane.setCollapsed(true);
-        modulePane.add(new JLabel("FOO"));
-        modulePane.addPropertyChangeListener("collapsed", (PropertyChangeEvent evt) ->
-		{
-			if ((boolean) evt.getNewValue())
+		hider.add(label);
+		add(hider, WEST);
+		hiderButton.setActionCommand(TOGGLEACTION);
+		hiderButton.addActionListener((ActionEvent e)
+			->
 			{
-				hiderButton.setText("/\\");
-				collapsed = true;
-			}
-			else// if ("expanded".equals((String)evt.getNewValue()) )
-			{
-				hiderButton.setText("\\/");
-				collapsed = false;
-			}
+				String key = e.getActionCommand();
+				if (TOGGLEACTION.equals(key))
+				{
+					showHideShipBar();
+				}
 		});
-        modulePane.setMaximumSize(new Dimension(400, 400));
-        add(modulePane, CENTER);
-    }
 
-    private void showHideShipBar()
-    {
-        invokeLater(() ->
-		{
-			if (modulePane.isCollapsed())
+		//modulePane = new JPanel(new BorderLayout());
+		modulePane = new JXCollapsiblePane(DOWN);
+
+		modulePane.setLayout(new BorderLayout());
+		modulePane.setCollapsed(true);
+		modulePane.add(new JLabel("FOO"));
+		modulePane.addPropertyChangeListener("collapsed", (PropertyChangeEvent evt)
+											 ->
+											 {
+												 if ((boolean) evt.getNewValue())
+												 {
+													 hiderButton.setText("/\\");
+													 collapsed = true;
+												 }
+												 else// if ("expanded".equals((String)evt.getNewValue()) )
+												 {
+													 hiderButton.setText("\\/");
+													 collapsed = false;
+												 }
+										 });
+		modulePane.setMaximumSize(new Dimension(400, 400));
+		add(modulePane, CENTER);
+	}
+
+	private void showHideShipBar()
+	{
+		invokeLater(()
+			->
 			{
-				collapsed = false;
-				hiderButton.setText("<>");
-				modulePane.setCollapsed(false);
-			}
-			else
-			{
-				hiderButton.setText("<>");
-				modulePane.setCollapsed(true);
-			}
+				if (modulePane.isCollapsed())
+				{
+					collapsed = false;
+					hiderButton.setText("<>");
+					modulePane.setCollapsed(false);
+				}
+				else
+				{
+					hiderButton.setText("<>");
+					modulePane.setCollapsed(true);
+				}
 		});
-    }
+	}
 }
