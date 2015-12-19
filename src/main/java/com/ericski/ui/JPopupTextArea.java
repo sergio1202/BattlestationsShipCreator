@@ -4,11 +4,16 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.HashMap;
 import javax.swing.Action;
+import static javax.swing.Action.NAME;
 import javax.swing.JComponent;
 import javax.swing.JPopupMenu;
 import javax.swing.JSeparator;
 import javax.swing.JTextArea;
 import javax.swing.text.DefaultEditorKit;
+import static javax.swing.text.DefaultEditorKit.copyAction;
+import static javax.swing.text.DefaultEditorKit.cutAction;
+import static javax.swing.text.DefaultEditorKit.pasteAction;
+import static javax.swing.text.DefaultEditorKit.selectAllAction;
 
 public class JPopupTextArea extends JTextArea
 {
@@ -32,11 +37,11 @@ public class JPopupTextArea extends JTextArea
         createActionTable();
 
         JPopupMenu menu = new JPopupMenu();
-        menu.add(getActionByName(DefaultEditorKit.copyAction, "Copy"));
-        menu.add(getActionByName(DefaultEditorKit.cutAction, "Cut"));
-        menu.add(getActionByName(DefaultEditorKit.pasteAction, "Paste"));
+        menu.add(getActionByName(copyAction, "Copy"));
+        menu.add(getActionByName(cutAction, "Cut"));
+        menu.add(getActionByName(pasteAction, "Paste"));
         menu.add(new JSeparator());
-        menu.add(getActionByName(DefaultEditorKit.selectAllAction, "Select All"));
+        menu.add(getActionByName(selectAllAction, "Select All"));
         add(menu);
 
         addMouseListener(
@@ -56,7 +61,7 @@ public class JPopupTextArea extends JTextArea
         {
             a = actions.get(description);
         }
-        a.putValue(Action.NAME, description);
+        a.putValue(NAME, description);
         return a;
     }
 
@@ -66,7 +71,7 @@ public class JPopupTextArea extends JTextArea
         Action[] actionsArray = getActions();
         for (Action a : actionsArray)
         {
-            actions.put((String) a.getValue(Action.NAME), a);
+            actions.put((String) a.getValue(NAME), a);
         }
     }
 

@@ -2,13 +2,22 @@ package com.ericski.Battlestations.ui;
 
 import com.ericski.Battlestations.PDFShipWriterOptions;
 import java.awt.BorderLayout;
+import static java.awt.BorderLayout.CENTER;
+import static java.awt.BorderLayout.PAGE_END;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
+import static javax.swing.BorderFactory.createEmptyBorder;
+import static javax.swing.BorderFactory.createEmptyBorder;
+import static javax.swing.BorderFactory.createTitledBorder;
 import javax.swing.Box;
+import static javax.swing.Box.createHorizontalGlue;
+import static javax.swing.Box.createRigidArea;
 import javax.swing.BoxLayout;
+import static javax.swing.BoxLayout.LINE_AXIS;
+import static javax.swing.BoxLayout.PAGE_AXIS;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -19,7 +28,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JSlider;
+import static javax.swing.SwingConstants.HORIZONTAL;
+import static javax.swing.SwingUtilities.invokeLater;
 import javax.swing.UIManager;
+import static javax.swing.UIManager.getSystemLookAndFeelClassName;
+import static javax.swing.UIManager.setLookAndFeel;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
 
@@ -71,14 +84,14 @@ public class PDFPreferencesDialog extends JDialog implements ActionListener
     private void initUI()
     {
         setTitle("PDF Preferences");
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         ImageIcon icon = new ImageIcon(getClass().getResource("/img/icon.gif"));
         setIconImage(icon.getImage());
 
         JPanel holder = new JPanel();
-        holder.setLayout(new BoxLayout(holder, BoxLayout.PAGE_AXIS));
-        holder.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        holder.setLayout(new BoxLayout(holder, PAGE_AXIS));
+        holder.setBorder(createEmptyBorder(10, 10, 10, 10));
 
         showNotes = new JCheckBox("Show Notes");
         showSpeed = new JCheckBox("Show Speed Track");
@@ -90,7 +103,7 @@ public class PDFPreferencesDialog extends JDialog implements ActionListener
 
         JPanel controlChartPanel = new JPanel();
         controlChartPanel.setLayout(new GridLayout(7, 1, 2, 2));
-        controlChartPanel.setBorder(BorderFactory.createTitledBorder("Control Chart Options"));
+        controlChartPanel.setBorder(createTitledBorder("Control Chart Options"));
         controlChartPanel.add(showNotes);
         controlChartPanel.add(showSpeed);
         controlChartPanel.add(showOOC);
@@ -110,29 +123,29 @@ public class PDFPreferencesDialog extends JDialog implements ActionListener
         damageGroup.add(damageTrackRadio);
         damageGroup.add(damageNoneRadio);
         JPanel damagePanel = new JPanel();
-        damagePanel.setLayout(new BoxLayout(damagePanel, BoxLayout.LINE_AXIS));
-        damagePanel.setBorder(BorderFactory.createTitledBorder("Damage Chart Options"));
+        damagePanel.setLayout(new BoxLayout(damagePanel, LINE_AXIS));
+        damagePanel.setBorder(createTitledBorder("Damage Chart Options"));
         damagePanel.add(damageChartRadio);
-        damagePanel.add(Box.createRigidArea(new Dimension(10, 0)));
+        damagePanel.add(createRigidArea(new Dimension(10, 0)));
         damagePanel.add(damageTrackRadio);
-        damagePanel.add(Box.createRigidArea(new Dimension(10, 0)));
+        damagePanel.add(createRigidArea(new Dimension(10, 0)));
         damagePanel.add(damageNoneRadio);
-        damagePanel.add(Box.createHorizontalGlue());
+        damagePanel.add(createHorizontalGlue());
 
         holder.add(damagePanel);
 
-        qualitySlider = new JSlider(JSlider.HORIZONTAL, 0, 75, 0);
+        qualitySlider = new JSlider(HORIZONTAL, 0, 75, 0);
         qualitySlider.setMinorTickSpacing(5);
         qualitySlider.setMajorTickSpacing(25);
         JPanel qualityPanel = new JPanel();
-        qualityPanel.setLayout(new BoxLayout(qualityPanel, BoxLayout.LINE_AXIS));
-        qualityPanel.setBorder(BorderFactory.createTitledBorder("Ship Image Quality"));
+        qualityPanel.setLayout(new BoxLayout(qualityPanel, LINE_AXIS));
+        qualityPanel.setBorder(createTitledBorder("Ship Image Quality"));
         qualityPanel.add(new JLabel("Highest"));
-        damagePanel.add(Box.createRigidArea(new Dimension(3, 0)));
+        damagePanel.add(createRigidArea(new Dimension(3, 0)));
         qualityPanel.add(qualitySlider);
-        damagePanel.add(Box.createRigidArea(new Dimension(3, 0)));
+        damagePanel.add(createRigidArea(new Dimension(3, 0)));
         qualityPanel.add(new JLabel("Lowest"));
-        qualityPanel.add(Box.createHorizontalGlue());
+        qualityPanel.add(createHorizontalGlue());
 
         holder.add(qualityPanel);
 
@@ -142,12 +155,12 @@ public class PDFPreferencesDialog extends JDialog implements ActionListener
         paperSizeGroup.add(letterRadio);
         paperSizeGroup.add(legalRadio);
         JPanel pageSizePanel = new JPanel();
-        pageSizePanel.setLayout(new BoxLayout(pageSizePanel, BoxLayout.LINE_AXIS));
-        pageSizePanel.setBorder(BorderFactory.createTitledBorder("Paper Size"));
+        pageSizePanel.setLayout(new BoxLayout(pageSizePanel, LINE_AXIS));
+        pageSizePanel.setBorder(createTitledBorder("Paper Size"));
         pageSizePanel.add(letterRadio);
-        pageSizePanel.add(Box.createRigidArea(new Dimension(10, 0)));
+        pageSizePanel.add(createRigidArea(new Dimension(10, 0)));
         pageSizePanel.add(legalRadio);
-        pageSizePanel.add(Box.createHorizontalGlue());
+        pageSizePanel.add(createHorizontalGlue());
 
         holder.add(pageSizePanel);
 
@@ -164,17 +177,17 @@ public class PDFPreferencesDialog extends JDialog implements ActionListener
         cancelButton.addActionListener(this);
 
         JPanel buttonPane = new JPanel();
-        buttonPane.setLayout(new BoxLayout(buttonPane, BoxLayout.LINE_AXIS));
-        buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
+        buttonPane.setLayout(new BoxLayout(buttonPane, LINE_AXIS));
+        buttonPane.setBorder(createEmptyBorder(0, 10, 10, 10));
         buttonPane.add(defaultsButton);
-        buttonPane.add(Box.createRigidArea(new Dimension(5, 0)));
-        buttonPane.add(Box.createHorizontalGlue());
+        buttonPane.add(createRigidArea(new Dimension(5, 0)));
+        buttonPane.add(createHorizontalGlue());
         buttonPane.add(okButton);
-        buttonPane.add(Box.createRigidArea(new Dimension(10, 0)));
+        buttonPane.add(createRigidArea(new Dimension(10, 0)));
         buttonPane.add(cancelButton);
 
-        add(holder, BorderLayout.CENTER);
-        add(buttonPane, BorderLayout.PAGE_END);
+        add(holder, CENTER);
+        add(buttonPane, PAGE_END);
 
         pack();
         setResizable(false);
@@ -264,26 +277,21 @@ public class PDFPreferencesDialog extends JDialog implements ActionListener
 
     public static void main(String[] args)
     {
-        javax.swing.SwingUtilities.invokeLater(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                JFrame.setDefaultLookAndFeelDecorated(true);
-                try
-                {
-                    // Set System L&F
-                    UIManager.setLookAndFeel(
-                        UIManager.getSystemLookAndFeelClassName());
-                }
-                catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e)
-                {
-                    // handle exception
-                }
-                PDFPreferencesDialog dialog = new PDFPreferencesDialog();
-                dialog.setVisible(true);
-            }
-        });
+        invokeLater(() ->
+		{
+			JFrame.setDefaultLookAndFeelDecorated(true);
+			try
+			{
+				// Set System L&F
+				setLookAndFeel(getSystemLookAndFeelClassName());
+			}
+			catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException e)
+			{
+				// handle exception
+			}
+			PDFPreferencesDialog dialog = new PDFPreferencesDialog();
+			dialog.setVisible(true);
+		});
     }
 
     @Override

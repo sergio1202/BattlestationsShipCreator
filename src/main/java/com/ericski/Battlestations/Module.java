@@ -4,13 +4,16 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
+import static java.awt.image.BufferedImage.TYPE_INT_RGB;
+import static java.lang.Math.toRadians;
 import java.util.concurrent.ConcurrentHashMap;
 import org.apache.logging.log4j.LogManager;
+import static org.apache.logging.log4j.LogManager.getLogger;
 import org.apache.logging.log4j.Logger;
 
 public abstract class Module implements Comparable<Module>, Cloneable
 {
-    static final Logger logger = LogManager.getLogger(Module.class);
+    static final Logger logger = getLogger(Module.class);
     public final static String BLANK = "blank";
     public final static String POD_SUFFIX = "_pod";
 
@@ -128,16 +131,16 @@ public abstract class Module implements Comparable<Module>, Cloneable
             image = loadImage();
         }
 
-        if (rotation == 0 || image == null || name.equals(Module.BLANK))
+        if (rotation == 0 || image == null || name.equals(BLANK))
         {
             return image;
         }
 
-        BufferedImage newImage = new BufferedImage(253, 253, BufferedImage.TYPE_INT_RGB);
+        BufferedImage newImage = new BufferedImage(253, 253, TYPE_INT_RGB);
         Graphics2D g2d = (Graphics2D) newImage.getGraphics();
         //creating the AffineTransform instance 
         AffineTransform affineTransform = new AffineTransform();
-        affineTransform.rotate(Math.toRadians(rotation), 253 / 2, 253 / 2);
+        affineTransform.rotate(toRadians(rotation), 253 / 2, 253 / 2);
         //draw the image using the AffineTransform 
         g2d.drawImage(image, affineTransform, null);
         return newImage;

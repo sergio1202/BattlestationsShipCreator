@@ -1,26 +1,50 @@
 package com.ericski.Battlestations;
 
+import static com.ericski.Battlestations.ModuleFactory.INSTANCE;
+import static com.ericski.Battlestations.ModuleFactory.getBlankModule;
 import java.awt.AlphaComposite;
+import static java.awt.AlphaComposite.Src;
 import java.awt.Color;
+import static java.awt.Color.BLACK;
+import static java.awt.Color.WHITE;
+import static java.awt.Font.BOLD;
 import java.awt.Graphics2D;
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+import static java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment;
 import java.awt.Image;
 import java.awt.RenderingHints;
+import static java.awt.RenderingHints.KEY_ANTIALIASING;
+import static java.awt.RenderingHints.KEY_TEXT_ANTIALIASING;
+import static java.awt.RenderingHints.VALUE_ANTIALIAS_ON;
+import static java.awt.RenderingHints.VALUE_TEXT_ANTIALIAS_ON;
 import java.awt.Transparency;
+import static java.awt.Transparency.BITMASK;
 import java.awt.image.BufferedImage;
+import static java.awt.image.BufferedImage.TYPE_INT_RGB;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Integer.parseInt;
+import static java.lang.Math.ceil;
+import static java.lang.Math.floor;
 import java.util.ArrayList;
 import java.util.Arrays;
+import static java.util.Arrays.asList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import org.apache.logging.log4j.LogManager;
+import static org.apache.logging.log4j.LogManager.getLogger;
 import org.apache.logging.log4j.Logger;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -28,11 +52,13 @@ import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
 import org.jdom2.output.Format.TextMode;
+import static org.jdom2.output.Format.TextMode.TRIM;
+import static org.jdom2.output.Format.getPrettyFormat;
 import org.jdom2.output.XMLOutputter;
 
 public final class Ship implements Comparable<Ship>
 {
-    private final static Logger logger = LogManager.getLogger(Ship.class);
+    private final static Logger logger = getLogger(Ship.class);
     String name = "";
     String species = "Generic";
     int size = 3;
@@ -82,7 +108,7 @@ public final class Ship implements Comparable<Ship>
         notes = new ArrayList<>();
         if (notesString != null)
         {
-            notes.addAll(Arrays.asList(notesString.split("\n")));
+            notes.addAll(asList(notesString.split("\n")));
         }
     }
 
@@ -181,7 +207,7 @@ public final class Ship implements Comparable<Ship>
         }
         else
         {
-            return ModuleFactory.getBlankModule();
+            return getBlankModule();
         }
     }
 
@@ -244,8 +270,8 @@ public final class Ship implements Comparable<Ship>
     public String toXML()
     {
         XMLOutputter outputer = new XMLOutputter();
-        Format format = Format.getPrettyFormat().setIndent("\t");
-        format.setTextMode(TextMode.TRIM);
+        Format format = getPrettyFormat().setIndent("\t");
+        format.setTextMode(TRIM);
         outputer.setFormat(format);
         return outputer.outputString(toDocument());
     }
@@ -290,8 +316,8 @@ public final class Ship implements Comparable<Ship>
         }
         try
         {
-            ship.setSize(Integer.parseInt(sizeString));
-            ship.setDamageSize(Integer.parseInt(sizeString));
+            ship.setSize(parseInt(sizeString));
+            ship.setDamageSize(parseInt(sizeString));
         }
         catch (NumberFormatException iggy)
         {
@@ -299,7 +325,7 @@ public final class Ship implements Comparable<Ship>
         sizeString = shipElement.getAttributeValue("damageSize");
         try
         {
-            ship.setDamageSize(Integer.parseInt(sizeString));
+            ship.setDamageSize(parseInt(sizeString));
         }
         catch (NumberFormatException iggy)
         {
@@ -334,12 +360,12 @@ public final class Ship implements Comparable<Ship>
 
             try
             {
-                Module module = ModuleFactory.INSTANCE.getModuleByName(nameString);
+                Module module = INSTANCE.getModuleByName(nameString);
                 if (logger.isTraceEnabled())
                 {
                     logger.trace("Before " + module.toString());
                 }
-                module.setRotation(Integer.parseInt(rotationString));
+                module.setRotation(parseInt(rotationString));
                 module.setUpgraded("T".equals(upgradedString));
 
                 if (logger.isTraceEnabled())
@@ -349,11 +375,11 @@ public final class Ship implements Comparable<Ship>
 
                 if (locationString != null && locationString.length() > 0)
                 {
-                    ship.addModule(module, Integer.parseInt(locationString));
+                    ship.addModule(module, parseInt(locationString));
                 }
                 else
                 {
-                    ship.addModule(module, Integer.parseInt(rowString), Integer.parseInt(colString));
+                    ship.addModule(module, parseInt(rowString), parseInt(colString));
                 }
             }
             catch (NumberFormatException iggy)
@@ -401,7 +427,7 @@ public final class Ship implements Comparable<Ship>
             for (Object obj : array)
             {
                 Element shipElem = (Element) obj;
-                Ship ship = Ship.fromXML(shipElem);
+                Ship ship = fromXML(shipElem);
                 if (ship != null)
                 {
                     ships.add(ship);
@@ -422,7 +448,7 @@ public final class Ship implements Comparable<Ship>
 //		BufferedImage shipImage = new BufferedImage(1821,1821,BufferedImage.TYPE_INT_RGB);
 //		int keyOffset = 50;
 
-        BufferedImage shipImage = new BufferedImage(1771, 1771, BufferedImage.TYPE_INT_RGB);
+        BufferedImage shipImage = new BufferedImage(1771, 1771, TYPE_INT_RGB);
         int keyOffset = 0;
 
         Graphics2D g = shipImage.createGraphics();
@@ -430,10 +456,10 @@ public final class Ship implements Comparable<Ship>
         // Set up some anti-aliasing to look pretty
         //		
         // for antialising geometric shapes
-        g.addRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
+        g.addRenderingHints(new RenderingHints(KEY_ANTIALIASING, VALUE_ANTIALIAS_ON));
         // for antialiasing text
-        g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-        java.awt.Font f = new java.awt.Font("Courier", java.awt.Font.BOLD, 35);
+        g.setRenderingHint(KEY_TEXT_ANTIALIASING, VALUE_TEXT_ANTIALIAS_ON);
+        java.awt.Font f = new java.awt.Font("Courier", BOLD, 35);
         g.setFont(f);
 
         for (int i = 0; i < 7; i++)
@@ -452,9 +478,9 @@ public final class Ship implements Comparable<Ship>
                     {
                         int x = (keyOffset + j * 253) + 120;
                         int y = (keyOffset + i * 253) + 120;
-                        g.setColor(Color.BLACK);
+                        g.setColor(BLACK);
                         g.drawString("UPG", x, y);
-                        g.setColor(Color.WHITE);
+                        g.setColor(WHITE);
                         g.drawString("UPG", x - 1, y - 1);
                     }
                 }
@@ -492,27 +518,27 @@ public final class Ship implements Comparable<Ship>
     public BufferedImage generateThumbnailImage(int pixelSize)
     {
 //		BufferedImage shipImage = new BufferedImage(35,35,BufferedImage.TYPE_INT_ARGB);
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsEnvironment ge = getLocalGraphicsEnvironment();
         GraphicsDevice gs = ge.getDefaultScreenDevice();
         GraphicsConfiguration gc = gs.getDefaultConfiguration();
 
         // Create an image that supports transparent pixels
-        BufferedImage shipImage = gc.createCompatibleImage(pixelSize * 7, pixelSize * 7, Transparency.BITMASK);
+        BufferedImage shipImage = gc.createCompatibleImage(pixelSize * 7, pixelSize * 7, BITMASK);
 
         Graphics2D g = shipImage.createGraphics();
         //
         // Set up some anti-aliasing to look pretty
         //		
         // for antialising geometric shapes
-        g.addRenderingHints(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
+        g.addRenderingHints(new RenderingHints(KEY_ANTIALIASING, VALUE_ANTIALIAS_ON));
         // for antialiasing text
-        g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-        java.awt.Font f = new java.awt.Font("Courier", java.awt.Font.BOLD, pixelSize * 7);
+        g.setRenderingHint(KEY_TEXT_ANTIALIASING, VALUE_TEXT_ANTIALIAS_ON);
+        java.awt.Font f = new java.awt.Font("Courier", BOLD, pixelSize * 7);
         g.setFont(f);
 
         Color transparent = new Color(0, 0, 0, 0);
         g.setColor(transparent);
-        g.setComposite(AlphaComposite.Src);
+        g.setComposite(Src);
 
         for (int i = 0; i < 7; i++)
         {
@@ -528,7 +554,7 @@ public final class Ship implements Comparable<Ship>
                 {
                     //String profName = ModuleImageMapFactory.getInstance().getProfessionForModule(module.getName());					
                     //g.setColor(BattlestationColors.getColorFromName(profName));
-                    g.setColor(Color.BLACK);
+                    g.setColor(BLACK);
                     g.drawRect(j * pixelSize, i * pixelSize, pixelSize, pixelSize);
                     g.fillRect(j * pixelSize, i * pixelSize, pixelSize, pixelSize);
                 }
@@ -551,11 +577,11 @@ public final class Ship implements Comparable<Ship>
         }
         modCount -= podCount;
 
-        int partialSize = (int) Math.ceil(modCount / 3.0);
+        int partialSize = (int) ceil(modCount / 3.0);
         size = partialSize + 2;
-        size += (int) Math.ceil(podCount / 2.0);
+        size += (int) ceil(podCount / 2.0);
 
-        partialSize = (int) Math.floor(modCount / 3.0);
+        partialSize = (int) floor(modCount / 3.0);
         damageSize = partialSize + 2;
     }
 

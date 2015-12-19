@@ -4,6 +4,7 @@ import java.awt.Image;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
+import static javax.imageio.ImageIO.read;
 import org.apache.logging.log4j.message.FormattedMessage;
 
 public class InternalModule extends Module
@@ -39,7 +40,7 @@ public class InternalModule extends Module
             {
                 try (InputStream imageStream = getClass().getResourceAsStream(fileName))
                 {
-                    Image img = ImageIO.read(imageStream);
+                    Image img = read(imageStream);
                     if (img != null)
                     {
                         image = img;

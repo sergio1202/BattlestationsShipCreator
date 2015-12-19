@@ -1,11 +1,20 @@
 package com.ericski.graphics;
 
 import java.awt.Color;
+import static java.awt.Color.WHITE;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import static java.awt.RenderingHints.KEY_INTERPOLATION;
+import static java.awt.RenderingHints.VALUE_INTERPOLATION_BICUBIC;
 import java.awt.Transparency;
+import static java.awt.Transparency.OPAQUE;
 import java.awt.geom.AffineTransform;
+import static java.awt.geom.AffineTransform.getTranslateInstance;
 import java.awt.image.BufferedImage;
+import static java.awt.image.BufferedImage.TYPE_INT_ARGB;
+import static java.awt.image.BufferedImage.TYPE_INT_RGB;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
 
 public class BetterImageScaler
 {
@@ -14,15 +23,14 @@ public class BetterImageScaler
     {
         BufferedImage dest = new BufferedImage(w, h, src.getType());
         Graphics2D g2 = dest.createGraphics();
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
-                            RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+        g2.setRenderingHint(KEY_INTERPOLATION, VALUE_INTERPOLATION_BICUBIC);
         g2.fillRect(0, 0, w, h);
         double xScale = (double) w / src.getWidth();
         double yScale = (double) h / src.getHeight();
-        double scale = Math.max(xScale, yScale);
+        double scale = max(xScale, yScale);
         double x = (w - scale * src.getWidth()) / 2;
         double y = (h - scale * src.getHeight()) / 2;
-        AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+        AffineTransform at = getTranslateInstance(x, y);
         at.scale(scale, scale);
         g2.drawRenderedImage(src, at);
         g2.dispose();
@@ -33,17 +41,16 @@ public class BetterImageScaler
     {
         BufferedImage dest = new BufferedImage(w, h, src.getType());
         Graphics2D g2 = dest.createGraphics();
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
-                            RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+        g2.setRenderingHint(KEY_INTERPOLATION, VALUE_INTERPOLATION_BICUBIC);
         // fill background for scale to fit  (a better color choice/options might be handy)
-        g2.setPaint(Color.WHITE);
+        g2.setPaint(WHITE);
         g2.fillRect(0, 0, w, h);
         double xScale = (double) w / src.getWidth();
         double yScale = (double) h / src.getHeight();
-        double scale = Math.min(xScale, yScale);    // scale to fit
+        double scale = min(xScale, yScale);    // scale to fit
         double x = (w - scale * src.getWidth()) / 2;
         double y = (h - scale * src.getHeight()) / 2;
-        AffineTransform at = AffineTransform.getTranslateInstance(x, y);
+        AffineTransform at = getTranslateInstance(x, y);
         at.scale(scale, scale);
         g2.drawRenderedImage(src, at);
         g2.dispose();
@@ -67,15 +74,15 @@ public class BetterImageScaler
                                                         int targetWidth, int targetHeight, Object hint,
                                                         boolean progressiveBilinear)
     {
-        int type = (img.getTransparency() == Transparency.OPAQUE)
-                   ? BufferedImage.TYPE_INT_RGB : BufferedImage.TYPE_INT_ARGB;
+        int type = (img.getTransparency() == OPAQUE)
+                   ? TYPE_INT_RGB : TYPE_INT_ARGB;
         BufferedImage ret = img;
         BufferedImage scratchImage = null;
         Graphics2D g2 = null;
         int w, h;
         int prevW = ret.getWidth();
         int prevH = ret.getHeight();
-        boolean isTranslucent = img.getTransparency() != Transparency.OPAQUE;
+        boolean isTranslucent = img.getTransparency() != OPAQUE;
 
         if (progressiveBilinear)
         {
@@ -121,7 +128,7 @@ public class BetterImageScaler
                 scratchImage = new BufferedImage(w, h, type);
                 g2 = scratchImage.createGraphics();
             }
-            g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, hint);
+            g2.setRenderingHint(KEY_INTERPOLATION, hint);
             g2.drawImage(ret, 0, 0, w, h, 0, 0, prevW, prevH, null);
             prevW = w;
             prevH = h;

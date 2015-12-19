@@ -4,15 +4,29 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import static java.awt.RenderingHints.KEY_ANTIALIASING;
+import static java.awt.RenderingHints.KEY_FRACTIONALMETRICS;
+import static java.awt.RenderingHints.KEY_RENDERING;
+import static java.awt.RenderingHints.VALUE_ANTIALIAS_ON;
+import static java.awt.RenderingHints.VALUE_FRACTIONALMETRICS_ON;
+import static java.awt.RenderingHints.VALUE_RENDER_QUALITY;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.font.FontRenderContext;
 import java.awt.font.TextLayout;
 import java.awt.geom.AffineTransform;
+import static java.awt.geom.AffineTransform.getRotateInstance;
+import static java.awt.geom.AffineTransform.getRotateInstance;
+import static java.awt.geom.AffineTransform.getTranslateInstance;
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
+import static java.lang.Math.PI;
+import static java.lang.System.currentTimeMillis;
+import static java.lang.Thread.interrupted;
+import static java.lang.Thread.sleep;
+import static java.lang.Thread.yield;
 import javax.swing.JComponent;
 
 public class InfiniteProgressPanel extends JComponent implements MouseListener
@@ -64,9 +78,9 @@ public class InfiniteProgressPanel extends JComponent implements MouseListener
         this.fps = fps > 0.0f ? fps : 15.0f;
         this.barsCount = barsCount > 0 ? barsCount : 14;
 
-        this.hints = new RenderingHints(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-        this.hints.put(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        this.hints.put(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
+        this.hints = new RenderingHints(KEY_RENDERING, VALUE_RENDER_QUALITY);
+        this.hints.put(KEY_ANTIALIASING, VALUE_ANTIALIAS_ON);
+        this.hints.put(KEY_FRACTIONALMETRICS, VALUE_FRACTIONALMETRICS_ON);
     }
 
     public void setText(String text)
@@ -157,15 +171,15 @@ public class InfiniteProgressPanel extends JComponent implements MouseListener
     {
         Area[] builtTicker = new Area[barsCount];
         Point2D.Double center = new Point2D.Double((double) getWidth() / 2, (double) getHeight() / 2);
-        double fixedAngle = 2.0 * Math.PI / ((double) barsCount);
+        double fixedAngle = 2.0 * PI / ((double) barsCount);
 
         for (double i = 0.0; i < (double) barsCount; i++)
         {
             Area primitive = buildPrimitive();
 
-            AffineTransform toCenter = AffineTransform.getTranslateInstance(center.getX(), center.getY());
-            AffineTransform toBorder = AffineTransform.getTranslateInstance(45.0, -6.0);
-            AffineTransform toCircle = AffineTransform.getRotateInstance(-i * fixedAngle, center.getX(), center.getY());
+            AffineTransform toCenter = getTranslateInstance(center.getX(), center.getY());
+            AffineTransform toBorder = getTranslateInstance(45.0, -6.0);
+            AffineTransform toCircle = getRotateInstance(-i * fixedAngle, center.getX(), center.getY());
 
             AffineTransform toWheel = new AffineTransform();
             toWheel.concatenate(toCenter);
@@ -206,10 +220,10 @@ public class InfiniteProgressPanel extends JComponent implements MouseListener
         public void run()
         {
             Point2D.Double center = new Point2D.Double((double) getWidth() / 2, (double) getHeight() / 2);
-            double fixedIncrement = 2.0 * Math.PI / ((double) barsCount);
-            AffineTransform toCircle = AffineTransform.getRotateInstance(fixedIncrement, center.getX(), center.getY());
+            double fixedIncrement = 2.0 * PI / ((double) barsCount);
+            AffineTransform toCircle = getRotateInstance(fixedIncrement, center.getX(), center.getY());
 
-            long start = System.currentTimeMillis();
+            long start = currentTimeMillis();
             if (rampDelay == 0)
             {
                 alphaLevel = rampUp ? 255 : 0;
@@ -218,7 +232,7 @@ public class InfiniteProgressPanel extends JComponent implements MouseListener
             started = true;
             boolean inRamp = rampUp;
 
-            while (!Thread.interrupted())
+            while (!interrupted())
             {
                 if (!inRamp)
                 {
@@ -234,7 +248,7 @@ public class InfiniteProgressPanel extends JComponent implements MouseListener
                 {
                     if (alphaLevel < 255)
                     {
-                        alphaLevel = (int) (255 * (System.currentTimeMillis() - start) / rampDelay);
+                        alphaLevel = (int) (255 * (currentTimeMillis() - start) / rampDelay);
                         if (alphaLevel >= 255)
                         {
                             alphaLevel = 255;
@@ -244,7 +258,7 @@ public class InfiniteProgressPanel extends JComponent implements MouseListener
                 }
                 else if (alphaLevel > 0)
                 {
-                    alphaLevel = (int) (255 - (255 * (System.currentTimeMillis() - start) / rampDelay));
+                    alphaLevel = (int) (255 - (255 * (currentTimeMillis() - start) / rampDelay));
                     if (alphaLevel <= 0)
                     {
                         alphaLevel = 0;
@@ -254,13 +268,13 @@ public class InfiniteProgressPanel extends JComponent implements MouseListener
 
                 try
                 {
-                    Thread.sleep(inRamp ? 10 : (int) (1000 / fps));
+                    sleep(inRamp ? 10 : (int) (1000 / fps));
                 }
                 catch (InterruptedException ie)
                 {
                     break;
                 }
-                Thread.yield();
+                yield();
             }
 
             if (!rampUp)

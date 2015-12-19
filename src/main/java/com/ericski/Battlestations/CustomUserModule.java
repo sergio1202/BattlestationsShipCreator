@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
+import static javax.imageio.ImageIO.read;
 import org.apache.logging.log4j.message.FormattedMessage;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -44,7 +45,7 @@ public class CustomUserModule extends Module
             {
                 try (InputStream imageStream = new FileInputStream(fileName))
                 {
-                    Image img = ImageIO.read(imageStream);
+                    Image img = read(imageStream);
                     if (img != null)
                     {
                         image = img;

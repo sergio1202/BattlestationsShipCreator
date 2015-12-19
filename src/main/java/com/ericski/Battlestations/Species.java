@@ -1,5 +1,7 @@
 package com.ericski.Battlestations;
 
+import static com.ericski.Battlestations.BookSelectionEnum.Core;
+
 public class Species
 {
 
@@ -9,7 +11,7 @@ public class Species
     public Species(String name)
     {
         this.name = name;
-        this.book = BookSelectionEnum.Core;
+        this.book = Core;
     }
 
 

@@ -2,6 +2,7 @@ package com.ericski.Battlestations.ui;
 
 import com.ericski.Battlestations.Module;
 import com.ericski.Battlestations.Ship;
+import static com.ericski.Battlestations.ui.ModuleSelectionPanel.DEFAULTSIZE;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -13,7 +14,7 @@ import javax.swing.JPanel;
 
 public class ModuleCreatorPanel extends JPanel
 {
-    private final int sizer = ModuleSelectionPanel.DEFAULTSIZE;
+    private final int sizer = DEFAULTSIZE;
     private static final long serialVersionUID = 1L;
     private final JPanel shipgrid;
     List<ModuleSelectionPanel> modulePanels = new ArrayList<>();

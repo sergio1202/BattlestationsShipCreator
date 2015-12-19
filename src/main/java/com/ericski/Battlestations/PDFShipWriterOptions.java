@@ -2,12 +2,14 @@ package com.ericski.Battlestations;
 
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
+import static java.util.prefs.Preferences.userNodeForPackage;
 import org.apache.logging.log4j.LogManager;
+import static org.apache.logging.log4j.LogManager.getLogger;
 import org.apache.logging.log4j.Logger;
 
 public class PDFShipWriterOptions
 {
-    private static final Logger logger = LogManager.getLogger(PDFShipWriterOptions.class);
+    private static final Logger logger = getLogger(PDFShipWriterOptions.class);
     
     boolean showNotes = false;
     boolean damageTrack = false;
@@ -113,7 +115,7 @@ public class PDFShipWriterOptions
 
     public void loadPreferences()
     {
-        Preferences prefs = Preferences.userNodeForPackage(PDFShipWriterOptions.class);
+        Preferences prefs = userNodeForPackage(PDFShipWriterOptions.class);
         showNotes = prefs.getBoolean("ShowNotes", false);
         showSpeed = prefs.getBoolean("ShowSpeedTrack", true);
         showOCC = prefs.getBoolean("ShowOOCTrack", true);
@@ -143,7 +145,7 @@ public class PDFShipWriterOptions
 
     public void savePreferences()
     {
-        Preferences prefs = Preferences.userNodeForPackage(PDFShipWriterOptions.class);
+        Preferences prefs = userNodeForPackage(PDFShipWriterOptions.class);
 
         prefs.putBoolean("ShowNotes", showNotes);
         prefs.putBoolean("ShowSpeedTrack", showSpeed);

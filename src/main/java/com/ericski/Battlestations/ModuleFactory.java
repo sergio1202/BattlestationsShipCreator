@@ -2,7 +2,6 @@ package com.ericski.Battlestations;
 
 import static com.ericski.Battlestations.Module.BLANK;
 import java.io.File;
-import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -63,8 +62,8 @@ public enum ModuleFactory
         return new InternalModule(BLANK, 0, "Empty Space", "general", "/com/ericski/Battlestations/Images/Modules/blank.jpg");
     }
 
-    
-     
+
+
     private void addModule(String name, String description, String profession)
     {
         addModule(name, description, profession, true);
@@ -73,7 +72,7 @@ public enum ModuleFactory
     private void addModule(String name, String description, String profession, boolean newEdition)
     {
         professions.add(profession);
-        
+
         Module m;
         if(newEdition)
             m = new InternalModule(name, 0, description, profession, "/com/ericski/Battlestations/Images/Modules2/" + name + ".jpg");
@@ -116,7 +115,7 @@ public enum ModuleFactory
 
     public Module getModuleByName(String nameString)
     {
-        Module fromMap = nameMap.get(nameString);        
+        Module fromMap = nameMap.get(nameString);
         return fromMap.copy();
     }
 
@@ -135,14 +134,7 @@ public enum ModuleFactory
 
     private void processUserModules()
     {
-        File[] moduleFiles = userDir.listFiles(new FilenameFilter()
-        {
-            @Override
-            public boolean accept(File dir, String name)
-            {
-                return ( name.endsWith(".module"));
-            }
-        });
+        File[] moduleFiles = userDir.listFiles((File dir, String fileName) -> (fileName.endsWith(".module")));
         for (File f : moduleFiles)
         {
             Module c = CustomUserModule.fromXml(f);
