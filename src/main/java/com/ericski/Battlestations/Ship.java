@@ -499,6 +499,31 @@ public final class Ship implements Comparable<Ship>
 		return shipImage;
 	}
 
+	public BufferedImage generatePrintImage()
+	{
+		BufferedImage shipImage = new BufferedImage(21000, 21000, BufferedImage.TYPE_INT_RGB);
+		int keyOffset = 0;
+
+		Graphics2D g = shipImage.createGraphics();
+		g.addRenderingHints(new RenderingHints(KEY_ANTIALIASING, VALUE_ANTIALIAS_ON));
+
+
+		for (int i = 0; i < 7; i++)
+		{
+			for (int j = 0; j < 7; j++)
+			{
+				int key = (i * 7) + j;
+				Module module = getModule(key);
+				Image img = module.getLargeImage();
+				if (img != null)
+				{
+					g.drawImage(img, keyOffset + j * 3000, keyOffset + i * 3000, null);
+				}
+			}
+		}
+		return shipImage;
+	}
+
 	public BufferedImage generateThumbnailImage()
 	{
 		return generateThumbnailImage(4);

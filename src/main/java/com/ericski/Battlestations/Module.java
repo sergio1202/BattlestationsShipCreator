@@ -1,5 +1,6 @@
 package com.ericski.Battlestations;
 
+import com.ericski.graphics.BetterImageScaler;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.geom.AffineTransform;
@@ -132,18 +133,72 @@ public abstract class Module implements Comparable<Module>, Cloneable
 
 		if (rotation == 0 || image == null || name.equals(BLANK))
 		{
-			return image;
+			int side = image.getHeight(null);
+			if (side == 253)
+				return image;
+			else
+			{
+				BufferedImage newImage = new BufferedImage(side,side, TYPE_INT_RGB);
+				Graphics2D g2d = (Graphics2D) newImage.getGraphics();
+				g2d.drawImage(image, 0,0,null);
+				return BetterImageScaler.getScaledImage(newImage, 253,253);
+			}
 		}
 
-		BufferedImage newImage = new BufferedImage(253, 253, TYPE_INT_RGB);
+		int img_height = image.getHeight(null);
+		int img_width = image.getWidth(null);
+
+
+		BufferedImage newImage = new BufferedImage(img_width,img_height, TYPE_INT_RGB);
 		Graphics2D g2d = (Graphics2D) newImage.getGraphics();
 		//creating the AffineTransform instance
 		AffineTransform affineTransform = new AffineTransform();
-		affineTransform.rotate(toRadians(rotation), 253 / 2, 253 / 2);
+		affineTransform.rotate(toRadians(rotation), img_width / 2, img_width / 2);
 		//draw the image using the AffineTransform
 		g2d.drawImage(image, affineTransform, null);
-		return newImage;
+		if ( img_width == 253)
+			return newImage;
+		else
+			return BetterImageScaler.getScaledImage(newImage, 253,253);
 	}
+
+	public synchronized Image getLargeImage()
+	{
+		if (image == null)
+		{
+			image = loadImage();
+		}
+
+		if (rotation == 0 || image == null || name.equals(BLANK))
+		{
+			int side = image.getHeight(null);
+			if (side == 3000)
+				return image;
+			else
+			{
+				BufferedImage newImage = new BufferedImage(side,side, TYPE_INT_RGB);
+				Graphics2D g2d = (Graphics2D) newImage.getGraphics();
+				g2d.drawImage(image, 0,0,null);
+				return BetterImageScaler.getScaledImage(newImage, 3000,3000);
+			}
+		}
+
+		int img_height = image.getHeight(null);
+		int img_width = image.getWidth(null);
+
+		BufferedImage newImage = new BufferedImage(img_width,img_height, TYPE_INT_RGB);
+		Graphics2D g2d = (Graphics2D) newImage.getGraphics();
+		//creating the AffineTransform instance
+		AffineTransform affineTransform = new AffineTransform();
+		affineTransform.rotate(toRadians(rotation), img_width / 2, img_width / 2);
+		//draw the image using the AffineTransform
+		g2d.drawImage(image, affineTransform, null);
+		if ( img_width == 3000)
+			return newImage;
+		else
+			return BetterImageScaler.getScaledImage(newImage, 3000,3000);
+	}
+
 
 	@Override
 	public int compareTo(Module other)

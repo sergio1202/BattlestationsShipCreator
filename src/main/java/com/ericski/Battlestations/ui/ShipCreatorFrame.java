@@ -59,6 +59,7 @@ public class ShipCreatorFrame extends JFrame
 	private static final String SHOW_TOOL_BAR_PREFS_KEY = "showToolBar";
 	private static final String EXITACTION = "EXIT";
 	private static final String EXPORTJPGACTION = "ExportJPG";
+	private static final String EXPORTLARGEACTION = "ExportLARGE";
 	private static final String EXPORTPDFACTION = "ExportPDF";
 	private static final String SAVEACTION = "SAVE";
 	private static final String LOADACTION = "LOAD";
@@ -203,9 +204,7 @@ public class ShipCreatorFrame extends JFrame
 		optionMenu.add(pdfOptionsMenu);
 
 		showToolBarMenu = new JCheckBoxMenuItem("Show Toolbar");
-		Preferences prefs = Preferences.userNodeForPackage(ShipCreatorFrame.class);
-		boolean showToolbar = prefs.getBoolean(SHOW_TOOL_BAR_PREFS_KEY, true);
-		showToolBarMenu.setSelected(showToolbar);
+		showToolBarMenu.setSelected(true);
 		showToolBarMenu.setMnemonic('t');
 		showToolBarMenu.addChangeListener(new ChangeListener()
 		{
@@ -285,16 +284,16 @@ public class ShipCreatorFrame extends JFrame
 		exportJPGButton.setText("Export as JPG");
 		toolBar.add(exportJPGButton);
 
+		JButton exportLargeButton = createToolBarButton("/toolbarButtonGraphics/general/Export24.gif", EXPORTLARGEACTION, actionListener);
+		exportLargeButton.setText("Export as Large JPG");
+		toolBar.add(exportLargeButton);
+
 		toolBar.addSeparator();
 
 		JButton exitButton = createToolBarButton("/toolbarButtonGraphics/general/Stop24.gif", EXITACTION, actionListener);
 		exitButton.setText("Exit");
 		toolBar.add(exitButton);
 
-		if (!showToolbar)
-		{
-			toolBar.setVisible(false);
-		}
 		contentPane.add(toolBar, BorderLayout.PAGE_START);
 
 		setContentPane(contentPane);
@@ -372,6 +371,9 @@ public class ShipCreatorFrame extends JFrame
 					break;
 				case EXPORTJPGACTION:
 					exportJPG();
+					break;
+				case EXPORTLARGEACTION:
+					exportLarge();
 					break;
 				case EXPORTPDFACTION:
 					exportPDF();
@@ -522,7 +524,35 @@ public class ShipCreatorFrame extends JFrame
 		{
 			glassPane.setVisible(false);
 		}
+	}
 
+	protected void exportLarge()
+	{
+		glassPane.setText("Preparing to Export Large JPEG");
+		glassPane.start();
+		JFileChooser saver = getFileChooser();
+		FileChooserExtensionFileFilter filter = new FileChooserExtensionFileFilter(".jpg", "JPEG files");
+		saver.addChoosableFileFilter(filter);
+		saver.setAcceptAllFileFilterUsed(false);
+
+		int result = saver.showSaveDialog(this);
+		if (result == JFileChooser.APPROVE_OPTION)
+		{
+			glassPane.setText("Exporting Large JPEG");
+			glassPane.start();
+			File file = saver.getSelectedFile();
+			setDirectory(file);
+			if (!file.getAbsolutePath().toLowerCase().endsWith(filter.getExtension()))
+			{
+				file = new File(file.getAbsolutePath() + filter.getExtension());
+			}
+			ExportLargeTask task = new ExportLargeTask(this, shipPanel.generateShip(), file, glassPane);
+			task.execute();
+		}
+		else
+		{
+			glassPane.setVisible(false);
+		}
 	}
 
 	protected void exportPDF()
@@ -826,6 +856,52 @@ class ExportJPGTask extends SwingWorker<Void, Void>
 			ImageIO.write(shipImage, "jpeg", jpgFile);
 			progressPanel.stop();
 			JOptionPane.showMessageDialog(parent, "JPEG Exported", "Success", JOptionPane.INFORMATION_MESSAGE);
+		}
+		catch (IOException | HeadlessException ex)
+		{
+			progressPanel.stop();
+			logger.warn("Error Exporting Ship to JPEG", ex);
+			JOptionPane.showMessageDialog(parent, ex.getMessage(), "Error Exporting Ship to JPEG", JOptionPane.ERROR_MESSAGE);
+		}
+		finally
+		{
+			progressPanel.setVisible(false);
+		}
+
+		return null;
+	}
+}
+
+class ExportLargeTask extends SwingWorker<Void, Void>
+{
+	private static final Logger logger = LogManager.getLogger(ShipCreatorFrame.class);
+	Ship shipToExport;
+	JFrame parent;
+	File file;
+	InfiniteProgressPanel progressPanel;
+
+	public ExportLargeTask(JFrame parent, Ship shipToExport, File file, InfiniteProgressPanel progressPanel)
+	{
+		this.parent = parent;
+		this.shipToExport = shipToExport;
+		this.file = file;
+		this.progressPanel = progressPanel;
+	}
+
+	@Override
+	protected Void doInBackground() throws Exception
+	{
+
+		try
+		{
+			BufferedImage shipImage = shipToExport.generatePrintImage();
+
+			boolean written = ImageIO.write(shipImage, "jpeg", file);
+			progressPanel.stop();
+			if (written)
+				JOptionPane.showMessageDialog(parent, "JPEG Exported", "Success", JOptionPane.INFORMATION_MESSAGE);
+			else
+				JOptionPane.showMessageDialog(parent, "JPEG NOT Exported", "Failed", JOptionPane.INFORMATION_MESSAGE);
 		}
 		catch (IOException | HeadlessException ex)
 		{

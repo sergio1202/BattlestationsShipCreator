@@ -73,7 +73,7 @@ public enum ModuleFactory
 
 		Module m;
 		if (newEdition)
-			m = new InternalModule(name, 0, description, profession, "/com/ericski/Battlestations/Images/Modules2/"
+			m = new InternalModule(name, 0, description, profession, "/com/ericski/Battlestations/Images/Modules300dpi/"
 																		 + name + ".jpg");
 		else
 			m = new InternalModule(name, 0, description, profession, "/com/ericski/Battlestations/Images/Modules/"
