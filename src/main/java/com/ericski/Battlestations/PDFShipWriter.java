@@ -658,6 +658,11 @@ public class PDFShipWriter
 	}
 
 	public static void drawPDF(Ship ship, OutputStream outStream,
+			   PDFWriterOptions options) throws IOException {
+		drawPDF(ship, outStream, options);
+	}
+
+	public static void drawPDF(Ship ship, OutputStream outStream,
 							   PDFShipWriterOptions options) throws IOException
 	{
 		BufferedImage logoImage = null;

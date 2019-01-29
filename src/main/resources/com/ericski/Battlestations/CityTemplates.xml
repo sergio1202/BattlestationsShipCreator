@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cities>
+	<City name="Freighter" species="" size="5" damageSize="5">
+		<Tiles>
+			<Tile name="City_1" rotation="0" location="9" />
+			<Tile name="City_2" rotation="0" location="10" />
+			<Tile name="Desrt" rotation="0" location="11" />
+			<Tile name="Forest" rotation="0" location="15" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Forest" rotation="0" location="16" />
+			<Tile name="Forest" rotation="0" location="19" />
+			<Tile name="Forest" rotation="0" location="18" />
+			<Tile name="Forest" rotation="0" location="23" />
+			<Tile name="Forest" rotation="0" location="22" />
+			<Tile name="Forest" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Forest" rotation="0" location="26" />
+			<Tile name="Forest" rotation="0" location="29" />
+			<Tile name="Snow" rotation="0" location="31" />
+			<Tile name="Forest" rotation="0" location="30" />
+			<Tile name="Forest" rotation="0" location="32" />
+			<Tile name="Forest" rotation="0" location="33" />
+			<Tile name="Snow" rotation="0" location="38" />
+			<Tile name="Forest" rotation="0" location="39" />
+			<Tile name="Forest" rotation="0" location="36" />
+			<Tile name="Forest" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="43" />
+			<Tile name="Forest" rotation="0" location="40" />
+			<Tile name="Tiles_1" rotation="0" location="46" />
+			<Tile name="Tiles_1" rotation="0" location="47" />
+			<Tile name="Tiles_1" rotation="0" location="44" />
+		</Tiles>
+	</City>
+	<City name="Skiff" species="" size="3" damageSize="3">
+		<Tiles>
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+		</Tiles>
+	</City>
+	<City name="Shuttle" species="" size="4" damageSize="4">
+		<Tiles>
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_2" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="270" location="25" />
+			<Tile name="City_2" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="31" />
+		</Tiles>
+	</City>  
+	<City name="Outpost" species="" size="5" damageSize="5">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="0" location="17" />
+			<Tile name="Tiles_1" rotation="180" location="16" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="270" location="18" />
+			<Tile name="Tiles_2" rotation="270" location="23" />
+			<Tile name="Tiles_2" rotation="90" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="180" location="31" />
+			<Tile name="Tiles_1" rotation="90" location="30" />
+		</Tiles>
+	</City>
+	<City name="Cargo Transport" species="" size="8" damageSize="8">
+		<Tiles>
+			<Tile name="Forest" rotation="0" location="32" />
+			<Tile name="Forest" rotation="0" location="33" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_4" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="16" />
+			<Tile name="Snow" rotation="0" location="18" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="180" location="22" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="City_2" rotation="180" location="26" />
+			<Tile name="Forest" rotation="0" location="29" />
+			<Tile name="City_1" rotation="180" location="31" />
+			<Tile name="Forest" rotation="0" location="30" />
+		</Tiles>
+	</City>  
+	<City name="Starbase" species="" size="7" damageSize="7">
+		<Tiles>
+			<Tile name="Tiles_1" rotation="0" location="34" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="33" />
+			<Tile name="Tiles_6" rotation="0" location="14" />
+			<Tile name="Tiles_3" rotation="270" location="15" />
+			<Tile name="Tiles_2" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="16" />
+			<Tile name="City_1" rotation="0" location="19" />
+			<Tile name="Forest" rotation="0" location="18" />
+			<Tile name="Snow" rotation="0" location="21" />
+			<Tile name="Snow" rotation="0" location="20" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Snow" rotation="0" location="22" />
+			<Tile name="Forest" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="27" />
+			<Tile name="Forest" rotation="0" location="26" />
+			<Tile name="Tiles_1" rotation="0" location="29" />
+			<Tile name="Tiles_1" rotation="0" location="28" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Starlab" species="" size="7" damageSize="7">
+		<Tiles>
+			<Tile name="Tiles_1" rotation="0" location="34" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="33" />
+			<Tile name="Tiles_6" rotation="0" location="14" />
+			<Tile name="Tiles_3" rotation="270" location="15" />
+			<Tile name="Tiles_2" rotation="0" location="17" />
+			<Tile name="Tiles_3" rotation="270" location="16" />
+			<Tile name="City_1" rotation="0" location="19" />
+			<Tile name="Tiles_3" rotation="270" location="18" />
+			<Tile name="Snow" rotation="0" location="21" />
+			<Tile name="Forest" rotation="0" location="20" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_4" rotation="0" location="22" />
+			<Tile name="Tiles_4" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="27" />
+			<Tile name="Snow" rotation="0" location="26" />
+			<Tile name="Tiles_1" rotation="0" location="29" />
+			<Tile name="Tiles_1" rotation="0" location="28" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Leviathan" species="" size="10" damageSize="10">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="90" location="34" />
+			<Tile name="Tiles_2" rotation="0" location="1" />
+			<Tile name="Snow" rotation="0" location="32" />
+			<Tile name="City_2" rotation="180" location="33" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_2" rotation="0" location="5" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_6" rotation="270" location="8" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Snow" rotation="0" location="10" />
+			<Tile name="Desrt" rotation="0" location="11" />
+			<Tile name="Tiles_6" rotation="90" location="12" />
+			<Tile name="Tiles_5" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="16" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="Tiles_4" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="0" location="25" />
+			<Tile name="Forest" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="29" />
+			<Tile name="Tiles_2" rotation="270" location="28" />
+			<Tile name="City_1" rotation="180" location="31" />
+			<Tile name="Snow" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Human" size="5" damageSize="5">
+		<Tiles>
+			<Tile name="Tiles_3" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_2" rotation="0" location="23" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="City_2" rotation="180" location="25" />
+			<Tile name="Tiles_1" rotation="0" location="24" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_6" rotation="270" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Human" size="6" damageSize="6">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_3" rotation="270" location="23" />
+			<Tile name="Tiles_2" rotation="270" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_6" rotation="90" location="25" />
+			<Tile name="Tiles_4" rotation="0" location="24" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="90" location="40" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="City_2" rotation="270" location="30" />
+		</Tiles>
+	</City>
+	<City name="Destroyer" species="Human" size="7" damageSize="7">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="32" />
+			<Tile name="Tiles_2" rotation="0" location="3" />
+			<Tile name="City_1" rotation="0" location="33" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Tiles_6" rotation="270" location="10" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_4" rotation="0" location="23" />
+			<Tile name="Desrt" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="270" location="29" />
+			<Tile name="Tiles_3" rotation="90" location="31" />
+			<Tile name="City_2" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Human" size="8">
+		<Tiles>
+			<Tile name="City_1" rotation="90" location="32" />
+			<Tile name="Tiles_2" rotation="0" location="3" />
+			<Tile name="Snow" rotation="0" location="38" />
+			<Tile name="Tiles_4" rotation="0" location="39" />
+			<Tile name="Tiles_2" rotation="270" location="36" />
+			<Tile name="Snow" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="43" />
+			<Tile name="Tiles_3" rotation="0" location="40" />
+			<Tile name="Tiles_6" rotation="270" location="10" />
+			<Tile name="Tiles_1" rotation="0" location="46" />
+			<Tile name="Tiles_1" rotation="0" location="47" />
+			<Tile name="Tiles_1" rotation="0" location="44" />
+			<Tile name="Tiles_6" rotation="90" location="17" />
+			<Tile name="Desrt" rotation="0" location="23" />
+			<Tile name="Tiles_2" rotation="90" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="City_2" rotation="270" location="31" />
+			<Tile name="Snow" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Human" size="9">
+		<Tiles>
+			<Tile name="Snow" rotation="90" location="32" />
+			<Tile name="City_1" rotation="90" location="33" />
+			<Tile name="Tiles_2" rotation="0" location="3" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Tiles_4" rotation="0" location="10" />
+			<Tile name="Desrt" rotation="0" location="11" />
+			<Tile name="City_2" rotation="0" location="17" />
+			<Tile name="Tiles_4" rotation="0" location="16" />
+			<Tile name="Tiles_3" rotation="0" location="18" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_2" rotation="270" location="22" />
+			<Tile name="Snow" rotation="90" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="90" location="26" />
+			<Tile name="Tiles_6" rotation="270" location="29" />
+			<Tile name="Tiles_6" rotation="180" location="31" />
+			<Tile name="Snow" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Tentac" size="5">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_1" rotation="90" location="16" />
+			<Tile name="City_2" rotation="270" location="32" />
+			<Tile name="Tiles_2" rotation="0" location="18" />
+			<Tile name="Tiles_1" rotation="90" location="23" />
+			<Tile name="Tiles_3" rotation="0" location="25" />
+			<Tile name="Tiles_6" rotation="0" location="10" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Desrt" rotation="270" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Tentac" size="6">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="0" location="17" />
+			<Tile name="Tiles_1" rotation="180" location="16" />
+			<Tile name="Snow" rotation="0" location="32" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="Tiles_3" rotation="90" location="38" />
+			<Tile name="Desrt" rotation="90" location="39" />
+			<Tile name="Tiles_1" rotation="90" location="36" />
+			<Tile name="Tiles_2" rotation="270" location="22" />
+			<Tile name="City_2" rotation="0" location="37" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Tiles_1" rotation="90" location="29" />
+			<Tile name="City_1" rotation="270" location="15" />
+		</Tiles>
+	</City>
+	<City name="Destroyer" species="Tentac" size="7">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="90" location="33" />
+			<Tile name="Desrt" rotation="180" location="38" />
+			<Tile name="Tiles_2" rotation="180" location="39" />
+			<Tile name="City_1" rotation="270" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_6" rotation="90" location="40" />
+			<Tile name="Tiles_3" rotation="0" location="10" />
+			<Tile name="Tiles_1" rotation="90" location="15" />
+			<Tile name="City_2" rotation="270" location="17" />
+			<Tile name="Tiles_2" rotation="0" location="16" />
+			<Tile name="Snow" rotation="0" location="19" />
+			<Tile name="Tiles_1" rotation="180" location="18" />
+			<Tile name="Tiles_1" rotation="90" location="22" />
+			<Tile name="Snow" rotation="0" location="26" />
+			<Tile name="Tiles_2" rotation="270" location="29" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Tentac" size="8">
+		<Tiles>
+			<Tile name="Tiles_3" rotation="180" location="2" />
+			<Tile name="Tiles_2" rotation="90" location="33" />
+			<Tile name="Desrt" rotation="180" location="38" />
+			<Tile name="Tiles_2" rotation="0" location="4" />
+			<Tile name="Tiles_6" rotation="180" location="39" />
+			<Tile name="City_1" rotation="180" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_4" rotation="0" location="8" />
+			<Tile name="City_2" rotation="270" location="9" />
+			<Tile name="Tiles_6" rotation="180" location="40" />
+			<Tile name="Tiles_2" rotation="0" location="10" />
+			<Tile name="Snow" rotation="0" location="11" />
+			<Tile name="Tiles_2" rotation="90" location="12" />
+			<Tile name="Snow" rotation="0" location="15" />
+			<Tile name="Tiles_1" rotation="270" location="19" />
+			<Tile name="Snow" rotation="0" location="22" />
+			<Tile name="Tiles_1" rotation="270" location="26" />
+			<Tile name="Tiles_1" rotation="90" location="29" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Tentac" size="9">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="270" location="33" />
+			<Tile name="Tiles_3" rotation="0" location="3" />
+			<Tile name="Desrt" rotation="180" location="38" />
+			<Tile name="Tiles_2" rotation="180" location="39" />
+			<Tile name="Tiles_6" rotation="180" location="36" />
+			<Tile name="Snow" rotation="0" location="37" />
+			<Tile name="City_1" rotation="0" location="8" />
+			<Tile name="Tiles_1" rotation="180" location="9" />
+			<Tile name="Tiles_6" rotation="90" location="40" />
+			<Tile name="Snow" rotation="0" location="10" />
+			<Tile name="Tiles_4" rotation="0" location="11" />
+			<Tile name="Tiles_2" rotation="90" location="12" />
+			<Tile name="Tiles_1" rotation="90" location="15" />
+			<Tile name="Tiles_4" rotation="0" location="16" />
+			<Tile name="Tiles_2" rotation="90" location="19" />
+			<Tile name="City_2" rotation="270" location="18" />
+			<Tile name="Tiles_1" rotation="90" location="22" />
+			<Tile name="Desrt" rotation="90" location="26" />
+			<Tile name="Tiles_2" rotation="270" location="29" />
+			<Tile name="Snow" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Canosian" size="5">
+		<Tiles>
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="33" />
+			<Tile name="Tiles_6" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="270" location="25" />
+			<Tile name="City_2" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="270" location="29" />
+			<Tile name="Snow" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Canosian" size="6">
+		<Tiles>
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_2" rotation="90" location="34" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_3" rotation="0" location="18" />
+			<Tile name="Tiles_6" rotation="180" location="33" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_4" rotation="0" location="25" />
+			<Tile name="City_2" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="26" />
+			<Tile name="Tiles_2" rotation="270" location="29" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Destroyer" species="Canosian" size="7">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="90" location="34" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="33" />
+			<Tile name="Tiles_4" rotation="0" location="17" />
+			<Tile name="Desrt" rotation="0" location="16" />
+			<Tile name="Tiles_3" rotation="0" location="18" />
+			<Tile name="Tiles_5" rotation="0" location="23" />
+			<Tile name="Snow" rotation="0" location="22" />
+			<Tile name="City_2" rotation="270" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_6" rotation="0" location="26" />
+			<Tile name="Tiles_6" rotation="180" location="29" />
+			<Tile name="Tiles_2" rotation="270" location="28" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Canosian" size="8">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="90" location="34" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_6" rotation="180" location="33" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="Tiles_3" rotation="270" location="10" />
+			<Tile name="City_2" rotation="180" location="11" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="16" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="City_1" rotation="0" location="22" />
+			<Tile name="Tiles_4" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="26" />
+			<Tile name="Tiles_1" rotation="0" location="29" />
+			<Tile name="Tiles_2" rotation="270" location="28" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Canosian" size="9">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="270" location="35" />
+			<Tile name="Snow" rotation="0" location="32" />
+			<Tile name="Desrt" rotation="0" location="33" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="Tiles_6" rotation="180" location="40" />
+			<Tile name="Tiles_3" rotation="270" location="10" />
+			<Tile name="Tiles_2" rotation="90" location="41" />
+			<Tile name="City_2" rotation="180" location="11" />
+			<Tile name="Tiles_4" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="16" />
+			<Tile name="Tiles_4" rotation="0" location="18" />
+			<Tile name="Tiles_6" rotation="270" location="23" />
+			<Tile name="Tiles_6" rotation="90" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="City_1" rotation="0" location="29" />
+			<Tile name="Snow" rotation="0" location="31" />
+			<Tile name="Snow" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Silicoid" size="5">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="16" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="City_2" rotation="90" location="18" />
+			<Tile name="Tiles_1" rotation="0" location="33" />
+			<Tile name="Tiles_6" rotation="270" location="23" />
+			<Tile name="Tiles_3" rotation="0" location="25" />
+			<Tile name="Desrt" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="270" location="29" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Silicoid" size="6">
+		<Tiles>
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="16" />
+			<Tile name="Tiles_3" rotation="0" location="18" />
+			<Tile name="Tiles_1" rotation="0" location="33" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_2" rotation="270" location="22" />
+			<Tile name="City_2" rotation="270" location="25" />
+			<Tile name="Snow" rotation="0" location="9" />
+			<Tile name="Tiles_1" rotation="0" location="24" />
+			<Tile name="Tiles_4" rotation="0" location="11" />
+			<Tile name="Tiles_2" rotation="90" location="26" />
+			<Tile name="Tiles_1" rotation="0" location="29" />
+		</Tiles>
+	</City>
+	<City name="Destroyer" species="Silicoid" size="7">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="90" location="34" />
+			<Tile name="Tiles_1" rotation="0" location="33" />
+			<Tile name="Tiles_6" rotation="0" location="9" />
+			<Tile name="Tiles_4" rotation="0" location="11" />
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="16" />
+			<Tile name="Tiles_3" rotation="0" location="18" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Snow" rotation="0" location="22" />
+			<Tile name="Tiles_1" rotation="0" location="25" />
+			<Tile name="City_2" rotation="0" location="24" />
+			<Tile name="City_1" rotation="90" location="26" />
+			<Tile name="Tiles_1" rotation="0" location="29" />
+			<Tile name="Tiles_2" rotation="270" location="28" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Silicoid" size="8">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="270" location="35" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="City_1" rotation="90" location="33" />
+			<Tile name="Snow" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_6" rotation="270" location="9" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Tiles_2" rotation="90" location="41" />
+			<Tile name="Tiles_4" rotation="0" location="11" />
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="16" />
+			<Tile name="Tiles_4" rotation="0" location="18" />
+			<Tile name="City_2" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="29" />
+			<Tile name="Snow" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Silicoid" size="9">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="270" location="35" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Desrt" rotation="0" location="2" />
+			<Tile name="City_1" rotation="90" location="33" />
+			<Tile name="Snow" rotation="0" location="38" />
+			<Tile name="Desrt" rotation="0" location="4" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_6" rotation="270" location="9" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Tiles_6" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="90" location="41" />
+			<Tile name="Tiles_6" rotation="90" location="11" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_4" rotation="0" location="16" />
+			<Tile name="Tiles_4" rotation="0" location="18" />
+			<Tile name="City_2" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_6" rotation="0" location="29" />
+			<Tile name="Snow" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Xeloxian" size="5">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_3" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="23" />
+			<Tile name="Tiles_2" rotation="270" location="22" />
+			<Tile name="Tiles_1" rotation="0" location="25" />
+			<Tile name="Tiles_4" rotation="0" location="24" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_1" rotation="0" location="26" />
+			<Tile name="City_2" rotation="90" location="31" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Xeloxian" size="6">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Desrt" rotation="0" location="3" />
+			<Tile name="Tiles_2" rotation="270" location="21" />
+			<Tile name="Tiles_3" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="23" />
+			<Tile name="Tiles_4" rotation="0" location="22" />
+			<Tile name="Tiles_1" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="90" location="27" />
+			<Tile name="Tiles_1" rotation="0" location="26" />
+			<Tile name="City_2" rotation="90" location="31" />
+		</Tiles>
+	</City>
+	<City name="Destroyer" species="Xeloxian" size="7">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="34" />
+			<Tile name="Tiles_3" rotation="0" location="38" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="0" location="14" />
+			<Tile name="Tiles_4" rotation="0" location="17" />
+			<Tile name="Snow" rotation="270" location="21" />
+			<Tile name="Tiles_2" rotation="0" location="20" />
+			<Tile name="Tiles_1" rotation="0" location="23" />
+			<Tile name="Tiles_1" rotation="0" location="22" />
+			<Tile name="Tiles_1" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="City_1" rotation="90" location="27" />
+			<Tile name="Tiles_1" rotation="0" location="26" />
+			<Tile name="Tiles_2" rotation="180" location="28" />
+			<Tile name="City_2" rotation="90" location="31" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Xeloxian" size="9">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="180" location="34" />
+			<Tile name="Desrt" rotation="0" location="3" />
+			<Tile name="Tiles_3" rotation="0" location="38" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="Tiles_4" rotation="0" location="10" />
+			<Tile name="Snow" rotation="0" location="11" />
+			<Tile name="Tiles_1" rotation="0" location="46" />
+			<Tile name="Tiles_1" rotation="0" location="44" />
+			<Tile name="Tiles_2" rotation="0" location="14" />
+			<Tile name="Tiles_6" rotation="180" location="45" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="21" />
+			<Tile name="Tiles_2" rotation="0" location="20" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_1" rotation="0" location="22" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="City_1" rotation="90" location="27" />
+			<Tile name="Tiles_1" rotation="0" location="26" />
+			<Tile name="Tiles_2" rotation="180" location="28" />
+			<Tile name="City_2" rotation="90" location="31" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Xeloxian" size="8">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="180" location="34" />
+			<Tile name="Tiles_3" rotation="0" location="38" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_1" rotation="0" location="46" />
+			<Tile name="Tiles_1" rotation="0" location="44" />
+			<Tile name="Tiles_2" rotation="0" location="14" />
+			<Tile name="Tiles_1" rotation="0" location="45" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="21" />
+			<Tile name="Tiles_2" rotation="0" location="20" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_1" rotation="0" location="22" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Tiles_4" rotation="0" location="27" />
+			<Tile name="City_1" rotation="0" location="26" />
+			<Tile name="Tiles_2" rotation="180" location="28" />
+			<Tile name="City_2" rotation="90" location="31" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Zoallan" size="5">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="16" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_3" rotation="0" location="24" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="City_2" rotation="270" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Zoallan" size="6">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_2" rotation="0" location="3" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_6" rotation="270" location="23" />
+			<Tile name="Tiles_3" rotation="0" location="25" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="City_2" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="10" />
+			<Tile name="Tiles_6" rotation="90" location="11" />
+			<Tile name="Tiles_5" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Destroyer" species="Zoallan" size="7">
+		<Tiles>
+			<Tile name="City_1" rotation="90" location="32" />
+			<Tile name="Tiles_2" rotation="0" location="3" />
+			<Tile name="Tiles_5" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_6" rotation="270" location="9" />
+			<Tile name="Snow" rotation="0" location="10" />
+			<Tile name="Desrt" rotation="0" location="11" />
+			<Tile name="Tiles_1" rotation="0" location="45" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_6" rotation="270" location="16" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="Tiles_3" rotation="0" location="24" />
+			<Tile name="City_2" rotation="270" location="31" />
+			<Tile name="Tiles_6" rotation="270" location="30" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Zoallan" size="8">
+		<Tiles>
+			<Tile name="Tiles_4" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Snow" rotation="0" location="37" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="Tiles_2" rotation="0" location="10" />
+			<Tile name="Tiles_1" rotation="0" location="44" />
+			<Tile name="Tiles_1" rotation="0" location="45" />
+			<Tile name="Tiles_6" rotation="270" location="15" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="16" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="City_2" rotation="90" location="23" />
+			<Tile name="Tiles_6" rotation="270" location="22" />
+			<Tile name="Tiles_6" rotation="90" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Tiles_3" rotation="0" location="31" />
+			<Tile name="City_1" rotation="270" location="30" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Zoallan" size="9">
+		<Tiles>
+			<Tile name="City_1" rotation="90" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Desrt" rotation="0" location="9" />
+			<Tile name="Tiles_2" rotation="90" location="40" />
+			<Tile name="Tiles_6" rotation="0" location="10" />
+			<Tile name="Desrt" rotation="0" location="11" />
+			<Tile name="Tiles_2" rotation="0" location="15" />
+			<Tile name="Tiles_5" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="16" />
+			<Tile name="Tiles_6" rotation="90" location="19" />
+			<Tile name="Snow" rotation="0" location="18" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_6" rotation="270" location="22" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="City_2" rotation="90" location="24" />
+			<Tile name="Tiles_6" rotation="90" location="26" />
+			<Tile name="Tiles_4" rotation="0" location="31" />
+			<Tile name="Tiles_3" rotation="180" location="30" />
+		</Tiles>
+	</City>
+ 
+	<City name="Scout" species="Whistler" size="5">
+		<Tiles>
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_2" rotation="0" location="16" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="City_2" rotation="90" location="18" />
+			<Tile name="Water" rotation="90" location="23" />
+			<Tile name="Tiles_3" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Whistler" size="6">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_4" rotation="0" location="16" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="Tiles_3" rotation="180" location="23" />
+			<Tile name="City_2" rotation="180" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="9" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="0" location="11" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Destroyer" species="Whistler" size="7">
+		<Tiles>
+			<Tile name="Tiles_5" rotation="90" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_2" rotation="270" location="9" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="0" location="11" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="City_2" rotation="90" location="16" />
+			<Tile name="Tiles_6" rotation="90" location="18" />
+			<Tile name="Tiles_3" rotation="180" location="23" />
+			<Tile name="Tiles_4" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_5" rotation="0" location="31" />
+			<Tile name="Water" rotation="90" location="30" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Whistler" size="8">
+		<Tiles>
+			<Tile name="City_1" rotation="90" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Water" rotation="180" location="9" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="0" location="15" />
+			<Tile name="Tiles_5" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="16" />
+			<Tile name="Tiles_2" rotation="0" location="18" />
+			<Tile name="Tiles_4" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="180" location="22" />
+			<Tile name="Tiles_6" rotation="90" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_5" rotation="270" location="29" />
+			<Tile name="City_2" rotation="270" location="31" />
+			<Tile name="Snow" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Whistler" size="9">
+		<Tiles>
+			<Tile name="Tiles_5" rotation="0" location="32" />
+			<Tile name="City_1" rotation="90" location="33" />
+			<Tile name="Tiles_5" rotation="180" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Tiles_2" rotation="0" location="10" />
+			<Tile name="Tiles_2" rotation="0" location="15" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_5" rotation="0" location="16" />
+			<Tile name="Tiles_2" rotation="0" location="19" />
+			<Tile name="Desrt" rotation="0" location="18" />
+			<Tile name="Tiles_4" rotation="0" location="23" />
+			<Tile name="Tiles_3" rotation="180" location="22" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_6" rotation="90" location="26" />
+			<Tile name="Water" rotation="90" location="29" />
+			<Tile name="Snow" rotation="0" location="31" />
+			<Tile name="City_2" rotation="270" location="30" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Trundlian" size="5">
+		<Tiles>
+			<Tile name="Desrt" rotation="0" location="17" />
+			<Tile name="Tiles_2" rotation="270" location="16" />
+			<Tile name="Tiles_3" rotation="0" location="32" />
+			<Tile name="Water" rotation="90" location="18" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="City_2" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Trundlian" size="6">
+		<Tiles>
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_3" rotation="0" location="32" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_2" rotation="90" location="25" />
+			<Tile name="Tiles_2" rotation="270" location="9" />
+			<Tile name="Tiles_4" rotation="0" location="24" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Water" rotation="90" location="11" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="City_2" rotation="0" location="30" />
+		</Tiles>
+	</City>  
+	<City name="Destroyer" species="Trundlian" size="7">
+		<Tiles>
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="Tiles_2" rotation="90" location="33" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Snow" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="43" />
+			<Tile name="Tiles_2" rotation="270" location="9" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="City_2" rotation="0" location="40" />
+			<Tile name="Water" rotation="90" location="11" />
+			<Tile name="Tiles_1" rotation="0" location="47" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_3" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="270" location="29" />
+			<Tile name="Tiles_5" rotation="0" location="31" />
+			<Tile name="Tiles_4" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Trundlian" size="8">
+		<Tiles>
+			<Tile name="Tiles_5" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_2" rotation="270" location="36" />
+			<Tile name="Tiles_4" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="43" />
+			<Tile name="Tiles_2" rotation="270" location="9" />
+			<Tile name="City_1" rotation="90" location="40" />
+			<Tile name="Desrt" rotation="0" location="10" />
+			<Tile name="Water" rotation="90" location="11" />
+			<Tile name="Tiles_1" rotation="0" location="47" />
+			<Tile name="Tiles_1" rotation="0" location="45" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Water" rotation="270" location="22" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="City_2" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="90" location="26" />
+			<Tile name="Tiles_3" rotation="0" location="31" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Trundlian" size="9">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="270" location="2" />
+			<Tile name="Tiles_3" rotation="0" location="32" />
+			<Tile name="Desrt" rotation="0" location="3" />
+			<Tile name="Tiles_5" rotation="0" location="38" />
+			<Tile name="City_1" rotation="90" location="4" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_2" rotation="270" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_2" rotation="270" location="43" />
+			<Tile name="City_1" rotation="90" location="40" />
+			<Tile name="Snow" rotation="0" location="10" />
+			<Tile name="Tiles_1" rotation="0" location="47" />
+			<Tile name="Tiles_1" rotation="0" location="45" />
+			<Tile name="Snow" rotation="0" location="17" />
+			<Tile name="Tiles_4" rotation="0" location="23" />
+			<Tile name="Water" rotation="270" location="22" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Tiles_2" rotation="90" location="26" />
+			<Tile name="Tiles_4" rotation="0" location="31" />
+			<Tile name="City_2" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Scout" species="Fungaloid" size="5">
+		<Tiles>
+			<Tile name="Tiles_3" rotation="180" location="17" />
+			<Tile name="Tiles_1" rotation="0" location="32" />
+			<Tile name="City_2" rotation="180" location="18" />
+			<Tile name="Snow" rotation="0" location="23" />
+			<Tile name="Tiles_4" rotation="0" location="25" />
+			<Tile name="Water" rotation="270" location="24" />
+			<Tile name="Desrt" rotation="0" location="11" />
+			<Tile name="Tiles_1" rotation="0" location="29" />
+			<Tile name="Tiles_1" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Frigate" species="Fungaloid" size="6">
+		<Tiles>
+			<Tile name="Tiles_3" rotation="180" location="17" />
+			<Tile name="Tiles_4" rotation="0" location="32" />
+			<Tile name="City_2" rotation="180" location="18" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Water" rotation="270" location="23" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="0" location="24" />
+			<Tile name="Desrt" rotation="0" location="11" />
+			<Tile name="City_1" rotation="180" location="31" />
+			<Tile name="Snow" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Explorer" species="Fungaloid" size="7">
+		<Tiles>
+			<Tile name="Tiles_5" rotation="0" location="32" />
+			<Tile name="Tiles_4" rotation="90" location="33" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="City_1" rotation="180" location="39" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Desrt" rotation="0" location="12" />
+			<Tile name="City_2" rotation="180" location="19" />
+			<Tile name="Tiles_3" rotation="180" location="18" />
+			<Tile name="Tiles_4" rotation="0" location="25" />
+			<Tile name="Water" rotation="270" location="24" />
+			<Tile name="Snow" rotation="0" location="26" />
+			<Tile name="Snow" rotation="0" location="31" />
+			<Tile name="Forest" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Cruiser" species="Fungaloid" size="8">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="270" location="35" />
+			<Tile name="Tiles_6" rotation="90" location="33" />
+			<Tile name="Desrt" rotation="0" location="5" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Tiles_1" rotation="0" location="40" />
+			<Tile name="Tiles_3" rotation="180" location="11" />
+			<Tile name="City_2" rotation="180" location="12" />
+			<Tile name="Water" rotation="270" location="17" />
+			<Tile name="Snow" rotation="0" location="19" />
+			<Tile name="Tiles_4" rotation="0" location="18" />
+			<Tile name="Forest" rotation="0" location="23" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Tiles_5" rotation="270" location="24" />
+			<Tile name="Snow" rotation="0" location="26" />
+			<Tile name="City_1" rotation="0" location="29" />
+			<Tile name="Tiles_1" rotation="0" location="31" />
+			<Tile name="Tiles_4" rotation="0" location="30" />
+		</Tiles>
+	</City>
+	<City name="Dreadnought" species="Fungaloid" size="9">
+		<Tiles>
+			<Tile name="Tiles_2" rotation="270" location="35" />
+			<Tile name="City_2" rotation="270" location="32" />
+			<Tile name="Snow" rotation="0" location="33" />
+			<Tile name="Tiles_1" rotation="0" location="38" />
+			<Tile name="Tiles_1" rotation="0" location="39" />
+			<Tile name="Tiles_2" rotation="0" location="5" />
+			<Tile name="Tiles_1" rotation="0" location="36" />
+			<Tile name="Tiles_1" rotation="0" location="37" />
+			<Tile name="Forest" rotation="0" location="40" />
+			<Tile name="Tiles_3" rotation="180" location="11" />
+			<Tile name="Tiles_6" rotation="90" location="12" />
+			<Tile name="Water" rotation="270" location="17" />
+			<Tile name="Tiles_6" rotation="90" location="19" />
+			<Tile name="Tiles_4" rotation="0" location="18" />
+			<Tile name="Desrt" rotation="0" location="23" />
+			<Tile name="Snow" rotation="0" location="25" />
+			<Tile name="Snow" rotation="0" location="24" />
+			<Tile name="Snow" rotation="0" location="26" />
+			<Tile name="City_1" rotation="0" location="29" />
+			<Tile name="Tiles_5" rotation="0" location="31" />
+			<Tile name="Tiles_4" rotation="90" location="30" />
+		</Tiles>
+	</City>
+</Cities>
+

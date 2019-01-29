@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/BattlestationsShipCreator/BattlestationsShipCreator/lib/jdom-2.0.6.jar"/>
+	<classpathentry kind="lib" path="D:/BattlestationsShipCreator/BattlestationsShipCreator/lib/log4j-api-2.10.0.jar"/>
+	<classpathentry kind="lib" path="D:/BattlestationsShipCreator/BattlestationsShipCreator/lib/com.lowagie.text-2.1.7.jar"/>
+	<classpathentry kind="lib" path="D:/BattlestationsShipCreator/BattlestationsShipCreator/lib/swingx-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/BattlestationsShipCreator/BattlestationsShipCreator/lib/l2fprod-common-all-6.9.1.jar"/>
+	<classpathentry kind="lib" path="D:/BattlestationsShipCreator/BattlestationsShipCreator/lib/log4j-core-2.10.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

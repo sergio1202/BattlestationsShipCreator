@@ -54,36 +54,40 @@ import org.apache.logging.log4j.Logger;
 
 public class ShipCreatorFrame extends JFrame
 {
-	private static final Logger logger = LogManager.getLogger(ShipCreatorFrame.class);
+	protected static final Logger logger = LogManager.getLogger(ShipCreatorFrame.class);
 
-	private static final String SHOW_TOOL_BAR_PREFS_KEY = "showToolBar";
-	private static final String EXITACTION = "EXIT";
-	private static final String EXPORTJPGACTION = "ExportJPG";
-	private static final String EXPORTLARGEACTION = "ExportLARGE";
-	private static final String EXPORTPDFACTION = "ExportPDF";
-	private static final String SAVEACTION = "SAVE";
-	private static final String LOADACTION = "LOAD";
-	private static final String NEWACTION = "NEWACTION";
-	private static final String PRINTACTION = "PRINTACTION";
-	private static final String VIEWACTION = "VIEWACTION";
-	private static final String XMLVIEWACTION = "XMLVIEWACTION";
-	private static final String ABOUT = "ABOUT";
-	private static final String CHANGELOG = "CHANGELOG";
-	private static final String COPYRIGHT = "COPYRIGHT";
+	protected static final String SHOW_TOOL_BAR_PREFS_KEY = "showToolBar";
+	protected static final String EXITACTION = "EXIT";
+	protected static final String EXPORTJPGACTION = "ExportJPG";
+	protected static final String EXPORTLARGEACTION = "ExportLARGE";
+	protected static final String EXPORTPDFACTION = "ExportPDF";
+	protected static final String SAVEACTION = "SAVE";
+	protected static final String LOADACTION = "LOAD";
+	protected static final String NEWACTION = "NEWACTION";
+	protected static final String PRINTACTION = "PRINTACTION";
+	protected static final String VIEWACTION = "VIEWACTION";
+	protected static final String XMLVIEWACTION = "XMLVIEWACTION";
+	protected static final String ABOUT = "ABOUT";
+	protected static final String CHANGELOG = "CHANGELOG";
+	protected static final String COPYRIGHT = "COPYRIGHT";
 
-	private static final String PDFOPTIONS = "PDFOPTIONS";
-	private static final String PATHOPTIONS = "PATHOPTIONS";
+	protected static final String PDFOPTIONS = "PDFOPTIONS";
+	protected static final String PATHOPTIONS = "PATHOPTIONS";
 
-	private static final long serialVersionUID = 1L;
+	protected static final long serialVersionUID = 1L;
 
 	String exportPDFDirectory = "";
 
-	ShipCreatorPanel shipPanel;
+	private ShipCreatorPanel shipPanel;
 	InfiniteProgressPanel glassPane;
 	Desktop desktop;
 	JToolBar toolBar;
 	JCheckBoxMenuItem showToolBarMenu;
 
+	public ShipCreatorFrame(String title) {
+		super(title);
+	}
+	
 	public ShipCreatorFrame()
 	{
 		super("Battlestations Ship Sheet Creator");
@@ -811,6 +815,7 @@ class LoadShipTask extends SwingWorker<Void, Void>
 			{
 				sb.append(line);
 			}
+			br.close();
 			Ship ship = Ship.fromXML(sb.toString());
 			shipPanel.setShip(ship);
 			progressPanel.stop();
@@ -833,12 +838,12 @@ class LoadShipTask extends SwingWorker<Void, Void>
 class ExportJPGTask extends SwingWorker<Void, Void>
 {
 	private static final Logger logger = LogManager.getLogger(ShipCreatorFrame.class);
-	Ship shipToExport;
+	BoardExporter shipToExport;
 	JFrame parent;
 	File jpgFile;
 	InfiniteProgressPanel progressPanel;
 
-	public ExportJPGTask(JFrame parent, Ship shipToExport, File jpgFile, InfiniteProgressPanel progressPanel)
+	public ExportJPGTask(JFrame parent, BoardExporter shipToExport, File jpgFile, InfiniteProgressPanel progressPanel)
 	{
 		this.parent = parent;
 		this.shipToExport = shipToExport;
@@ -872,97 +877,6 @@ class ExportJPGTask extends SwingWorker<Void, Void>
 	}
 }
 
-class ExportLargeTask extends SwingWorker<Void, Void>
-{
-	private static final Logger logger = LogManager.getLogger(ShipCreatorFrame.class);
-	Ship shipToExport;
-	JFrame parent;
-	File file;
-	InfiniteProgressPanel progressPanel;
-
-	public ExportLargeTask(JFrame parent, Ship shipToExport, File file, InfiniteProgressPanel progressPanel)
-	{
-		this.parent = parent;
-		this.shipToExport = shipToExport;
-		this.file = file;
-		this.progressPanel = progressPanel;
-	}
-
-	@Override
-	protected Void doInBackground() throws Exception
-	{
-
-		try
-		{
-			BufferedImage shipImage = shipToExport.generatePrintImage();
-
-			boolean written = ImageIO.write(shipImage, "jpeg", file);
-			progressPanel.stop();
-			if (written)
-				JOptionPane.showMessageDialog(parent, "JPEG Exported", "Success", JOptionPane.INFORMATION_MESSAGE);
-			else
-				JOptionPane.showMessageDialog(parent, "JPEG NOT Exported", "Failed", JOptionPane.INFORMATION_MESSAGE);
-		}
-		catch (IOException | HeadlessException ex)
-		{
-			progressPanel.stop();
-			logger.warn("Error Exporting Ship to JPEG", ex);
-			JOptionPane.showMessageDialog(parent, ex.getMessage(), "Error Exporting Ship to JPEG", JOptionPane.ERROR_MESSAGE);
-		}
-		finally
-		{
-			progressPanel.setVisible(false);
-		}
-
-		return null;
-	}
-}
-
-class ExportPDFTask extends SwingWorker<Void, Void>
-{
-	private static final Logger logger = LogManager.getLogger(ShipCreatorFrame.class);
-	Ship shipToExport;
-	JFrame parent;
-	File pdfFile;
-	InfiniteProgressPanel progressPanel;
-
-	public ExportPDFTask(JFrame parent, Ship shipToExport, File pdfFile, InfiniteProgressPanel progressPanel)
-	{
-		this.parent = parent;
-		this.shipToExport = shipToExport;
-		this.pdfFile = pdfFile;
-		this.progressPanel = progressPanel;
-	}
-
-	@Override
-	protected Void doInBackground() throws Exception
-	{
-
-		try
-		{
-			// Prepare to write to the file
-			FileOutputStream fout = new FileOutputStream(pdfFile);
-			PDFShipWriterOptions options = new PDFShipWriterOptions();
-			options.loadPreferences();
-			PDFShipWriter.drawPDF(shipToExport, fout, options);
-
-			progressPanel.stop();
-			JOptionPane.showMessageDialog(parent, "PDF Exported", "Success", JOptionPane.INFORMATION_MESSAGE);
-		}
-		catch (IOException | HeadlessException ex)
-		{
-			progressPanel.stop();
-			logger.warn("Error Exporting Ship to PDF", ex);
-			JOptionPane.showMessageDialog(parent, ex.getMessage(), "Error Exporting Ship to PDF", JOptionPane.ERROR_MESSAGE);
-		}
-		finally
-		{
-			progressPanel.setVisible(false);
-		}
-		return null;
-	}
-
-}
 
 class RawXmlDialog extends JDialog
 {

@@ -32,8 +32,8 @@ public class ModuleSelectorBar extends JOutlookBar
 			if (!"obsolete".equals(m.getProfession()))
 			{
 				allPanel.add(createVerticalStrut(3));
-				ModuleSelectionPanel msp = new ModuleSelectionPanel(-1, -1, false);
-				msp.setModule(m);
+				SelectionPanel msp = new SelectionPanel(-1, -1, false);
+				msp.setMoveableItem(m);
 				msp.setWidth(MODULESIZE);
 				msp.setHeight(MODULESIZE);
 				msp.setShowToolTip(true);
@@ -48,12 +48,12 @@ public class ModuleSelectorBar extends JOutlookBar
 
 		JPanel generalPanel = new JGradPanel();
 		generalPanel.setLayout(new BoxLayout(generalPanel, Y_AXIS));
-		ModuleSelectionPanel msp;
+		SelectionPanel msp;
 		for (Module m : INSTANCE.getAllModulesForProfession("general"))
 		{
 			generalPanel.add(createVerticalStrut(3));
-			msp = new ModuleSelectionPanel(-1, -1, false);
-			msp.setModule(m);
+			msp = new SelectionPanel(-1, -1, false);
+			msp.setMoveableItem(m);
 			msp.setWidth(MODULESIZE);
 			msp.setHeight(MODULESIZE);
 			msp.setShowToolTip(true);
@@ -71,8 +71,8 @@ public class ModuleSelectorBar extends JOutlookBar
 		for (Module m : INSTANCE.getAllModulesForProfession("pilotting"))
 		{
 			pilotPanel.add(createVerticalStrut(3));
-			msp = new ModuleSelectionPanel(-1, -1, false);
-			msp.setModule(m);
+			msp = new SelectionPanel(-1, -1, false);
+			msp.setMoveableItem(m);
 			msp.setWidth(MODULESIZE);
 			msp.setHeight(MODULESIZE);
 			msp.setShowToolTip(true);
@@ -90,8 +90,8 @@ public class ModuleSelectorBar extends JOutlookBar
 		for (Module m : INSTANCE.getAllModulesForProfession("science"))
 		{
 			sciencePanel.add(createVerticalStrut(3));
-			msp = new ModuleSelectionPanel(-1, -1, false);
-			msp.setModule(m);
+			msp = new SelectionPanel(-1, -1, false);
+			msp.setMoveableItem(m);
 			msp.setWidth(MODULESIZE);
 			msp.setHeight(MODULESIZE);
 			msp.setShowToolTip(true);
@@ -110,8 +110,8 @@ public class ModuleSelectorBar extends JOutlookBar
 		for (Module m : INSTANCE.getAllModulesForProfession("engineering"))
 		{
 			engineerPanel.add(createVerticalStrut(3));
-			msp = new ModuleSelectionPanel(-1, -1, false);
-			msp.setModule(m);
+			msp = new SelectionPanel(-1, -1, false);
+			msp.setMoveableItem(m);
 			msp.setWidth(MODULESIZE);
 			msp.setHeight(MODULESIZE);
 			msp.setShowToolTip(true);
@@ -130,8 +130,8 @@ public class ModuleSelectorBar extends JOutlookBar
 		for (Module m : INSTANCE.getAllModulesForProfession("combat"))
 		{
 			combatPanel.add(createVerticalStrut(3));
-			msp = new ModuleSelectionPanel(-1, -1, false);
-			msp.setModule(m);
+			msp = new SelectionPanel(-1, -1, false);
+			msp.setMoveableItem(m);
 			msp.setWidth(MODULESIZE);
 			msp.setHeight(MODULESIZE);
 			msp.setShowToolTip(true);
@@ -150,8 +150,8 @@ public class ModuleSelectorBar extends JOutlookBar
 		for (Module m : INSTANCE.getAllModulesForProfession("obsolete"))
 		{
 			obsoletePanel.add(createVerticalStrut(3));
-			msp = new ModuleSelectionPanel(-1, -1, false);
-			msp.setModule(m);
+			msp = new SelectionPanel(-1, -1, false);
+			msp.setMoveableItem(m);
 			msp.setWidth(MODULESIZE);
 			msp.setHeight(MODULESIZE);
 			msp.setShowToolTip(true);

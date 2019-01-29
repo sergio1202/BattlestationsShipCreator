@@ -7,18 +7,11 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.FontMetrics;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Insets;
-import java.awt.Paint;
-import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.geom.AffineTransform;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.Collections;
@@ -27,16 +20,13 @@ import java.util.List;
 import javax.swing.AbstractButton;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
-import javax.swing.plaf.basic.BasicLabelUI;
 import org.jdesktop.swingx.JXCollapsiblePane;
 import org.jdesktop.swingx.JXCollapsiblePane.Direction;
 
@@ -240,143 +230,3 @@ public class StandardShipBar extends JPanel
 	}
 }
 
-class VerticalLabelUI extends BasicLabelUI
-{
-	static
-	{
-		labelUI = new VerticalLabelUI(false);
-	}
-	protected boolean clockwise;
-
-	VerticalLabelUI(boolean clockwise)
-	{
-		super();
-		this.clockwise = clockwise;
-	}
-
-	@Override
-	public Dimension getPreferredSize(JComponent c)
-	{
-		Dimension dim = super.getPreferredSize(c);
-		return new Dimension(dim.height, dim.width);
-	}
-	private static Rectangle paintIconR = new Rectangle();
-	private static Rectangle paintTextR = new Rectangle();
-	private static Rectangle paintViewR = new Rectangle();
-	private static Insets paintViewInsets = new Insets(0, 0, 0, 0);
-
-	@Override
-	public void paint(Graphics g, JComponent c)
-	{
-		JLabel label = (JLabel) c;
-		String text = label.getText();
-		Icon icon = (label.isEnabled()) ? label.getIcon() : label.getDisabledIcon();
-
-		if ((icon == null) && (text == null))
-		{
-			return;
-		}
-
-		FontMetrics fm = g.getFontMetrics();
-		paintViewInsets = c.getInsets(paintViewInsets);
-
-		paintViewR.x = paintViewInsets.left;
-		paintViewR.y = paintViewInsets.top;
-
-		// Use inverted height & width
-		paintViewR.height = c.getWidth() - (paintViewInsets.left + paintViewInsets.right);
-		paintViewR.width = c.getHeight() - (paintViewInsets.top + paintViewInsets.bottom);
-
-		paintIconR.x = paintIconR.y = paintIconR.width = paintIconR.height = 0;
-		paintTextR.x = paintTextR.y = paintTextR.width = paintTextR.height = 0;
-
-		String clippedText
-			   = layoutCL(label, fm, text, icon, paintViewR, paintIconR, paintTextR);
-
-		Graphics2D g2 = (Graphics2D) g;
-		AffineTransform tr = g2.getTransform();
-		if (clockwise)
-		{
-			g2.rotate(Math.PI / 2);
-			g2.translate(0, -c.getWidth());
-		}
-		else
-		{
-			g2.rotate(-Math.PI / 2);
-			g2.translate(-c.getHeight(), 0);
-		}
-
-		if (icon != null)
-		{
-			icon.paintIcon(c, g, paintIconR.x, paintIconR.y);
-		}
-
-		if (text != null)
-		{
-			int textX = paintTextR.x;
-			int textY = paintTextR.y + fm.getAscent();
-
-			if (label.isEnabled())
-			{
-				paintEnabledText(label, g, clippedText, textX, textY);
-			}
-			else
-			{
-				paintDisabledText(label, g, clippedText, textX, textY);
-			}
-		}
-
-		g2.setTransform(tr);
-	}
-}
-
-class JGradPanel extends JPanel
-{
-	private static final long serialVersionUID = 1L;
-	Color color1;
-	Color color2;
-
-	public JGradPanel()
-	{
-		color1 = Color.WHITE.darker();
-		color2 = Color.WHITE;
-	}
-
-	public JGradPanel(Color color)
-	{
-		this.color1 = color.darker().darker();
-		this.color2 = color.brighter().brighter();
-	}
-
-	public JGradPanel(Color color1, Color color2)
-	{
-		this.color1 = color1;
-		this.color2 = color2;
-	}
-
-	@Override
-	public boolean isOpaque()
-	{
-		return true;
-	}
-
-	@Override
-	public void setBackground(Color color)
-	{
-		this.color1 = color.darker().darker();
-		this.color2 = color.brighter().brighter();
-	}
-
-	@Override
-	public void paintComponent(Graphics _g)
-	{
-		Graphics2D g = (Graphics2D) _g;
-
-		Rectangle bounds = getBounds();
-
-		// Set Paint for filling Shape
-		Paint gradientPaint = new GradientPaint(0, 0, color1, bounds.width, bounds.height, color2);
-		g.setPaint(gradientPaint);
-		g.fillRect(0, 0, bounds.width, bounds.height);
-	}
-}

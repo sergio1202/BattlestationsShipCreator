@@ -1,0 +1,16 @@
+/BattlestationColors.class
+/BookSelectionEnum.class
+/CustomUserModule.class
+/InternalModule.class
+/Module.class
+/ModuleFactory.class
+/PDFShipWriter.class
+/PDFShipWriterOptions.class
+/RuleSetEnum.class
+/RuleSetVersion$SingletonHolder.class
+/RuleSetVersion.class
+/Ship.class
+/ShipFactory.class
+/Species.class
+/SpeciesFactory$SingletonHolder.class
+/SpeciesFactory.class

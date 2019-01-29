@@ -90,4 +90,9 @@ public class CustomUserModule extends Module
 			return null;
 		}
 	}
+
+	@Override
+	public boolean isBlankMoveableItem() {
+		return false;
+	}
 }

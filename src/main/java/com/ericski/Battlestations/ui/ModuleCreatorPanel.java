@@ -2,7 +2,9 @@ package com.ericski.Battlestations.ui;
 
 import com.ericski.Battlestations.Module;
 import com.ericski.Battlestations.Ship;
-import static com.ericski.Battlestations.ui.ModuleSelectionPanel.DEFAULTSIZE;
+import static com.ericski.Battlestations.ui.SelectionPanel.DEFAULTSIZE;
+
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -17,27 +19,44 @@ public class ModuleCreatorPanel extends JPanel
 	private final int sizer = DEFAULTSIZE;
 	private static final long serialVersionUID = 1L;
 	private final JPanel shipgrid;
-	List<ModuleSelectionPanel> modulePanels = new ArrayList<>();
+	private final int gridSize;
+	List<SelectionPanel> modulePanels = new ArrayList<>();
 
-	public ModuleCreatorPanel()
+	public ModuleCreatorPanel(int gridSize, Color color)
 	{
 		super(new FlowLayout());
-		shipgrid = new JPanel(new GridLayout(7, 7, 0, 0));
-		shipgrid.setPreferredSize(new Dimension(sizer * 7, sizer * 7));
+		this.gridSize = gridSize;
+		shipgrid = new JPanel(new GridLayout(gridSize, gridSize, 0, 0));
+		shipgrid.setPreferredSize(new Dimension(sizer * gridSize, sizer * gridSize));
 
-		for (int y = 0; y < 7; y++)
+		for (int y = 0; y < gridSize; y++)
 		{
-			for (int x = 0; x < 7; x++)
+			for (int x = 0; x < gridSize; x++)
 			{
-				ModuleSelectionPanel moduleSelectionPanel = new ModuleSelectionPanel(x, y);
-				shipgrid.add(moduleSelectionPanel);
-				modulePanels.add(moduleSelectionPanel);
+				SelectionPanel panel = new SelectionPanel(x, y);
+				if(color != null) {
+					panel.setBackground(color);
+				}
+				else if(x == 3 || y == 3)
+				{
+					panel.setBackground(new Color(225, 225, 225));
+				}
+				else
+				{
+					panel.setBackground(Color.WHITE);
+				}
+				shipgrid.add(panel);
+				modulePanels.add(panel);
 			}
 		}
 		add(shipgrid);
 	}
+	
+	public ModuleCreatorPanel() {
+		this(7, null);
+	}
 
-	public List<ModuleSelectionPanel> getModulePanels()
+	public List<SelectionPanel> getModulePanels()
 	{
 		return new ArrayList<>(modulePanels);
 	}
@@ -45,28 +64,28 @@ public class ModuleCreatorPanel extends JPanel
 	@Override
 	public Dimension getMaximumSize()
 	{
-		return new Dimension((sizer * 7) + 5, (sizer * 7) + 5);
+		return new Dimension((sizer * gridSize) + 5, (sizer * gridSize) + 5);
 	}
 
 	@Override
 	public Dimension getMinimumSize()
 	{
-		return new Dimension((sizer * 7) + 5, (sizer * 7) + 5);
+		return new Dimension((sizer * gridSize) + 5, (sizer * gridSize) + 5);
 	}
 
 	@Override
 	public Dimension getPreferredSize()
 	{
-		return new Dimension((sizer * 7) + 5, (sizer * 7) + 5);
+		return new Dimension((sizer * gridSize) + 5, (sizer * gridSize) + 5);
 	}
 
 	public Map<Integer, Module> getModules()
 	{
 		Map<Integer, Module> modules = new HashMap<>();
-		for (ModuleSelectionPanel panel : modulePanels)
+		for (SelectionPanel panel : modulePanels)
 		{
-			Module module = panel.getModule();
-			int key = panel.getShipY() * 7 + panel.getShipX();
+			Module module = (Module) panel.getMoveableItem();
+			int key = panel.getShipY() * gridSize + panel.getShipX();
 			if (!module.isBlankModule())
 			{
 				modules.put(key, module.copy());
@@ -77,11 +96,11 @@ public class ModuleCreatorPanel extends JPanel
 
 	public void setModules(Ship ship)
 	{
-		for (ModuleSelectionPanel panel : modulePanels)
+		for (SelectionPanel panel : modulePanels)
 		{
-			int key = panel.getShipY() * 7 + panel.getShipX();
+			int key = panel.getShipY() * gridSize + panel.getShipX();
 			Module module = ship.getModule(key);
-			panel.setModule(module.copy());
+			panel.setMoveableItem(module.copy());
 		}
 	}
 

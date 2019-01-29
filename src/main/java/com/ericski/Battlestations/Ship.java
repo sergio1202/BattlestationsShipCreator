@@ -21,6 +21,8 @@ import static java.awt.RenderingHints.VALUE_TEXT_ANTIALIAS_ON;
 import static java.awt.Transparency.BITMASK;
 import java.awt.image.BufferedImage;
 import static java.awt.image.BufferedImage.TYPE_INT_RGB;
+
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
@@ -45,7 +47,9 @@ import static org.jdom2.output.Format.TextMode.TRIM;
 import static org.jdom2.output.Format.getPrettyFormat;
 import org.jdom2.output.XMLOutputter;
 
-public final class Ship implements Comparable<Ship>
+import com.ericski.Battlestations.ui.BoardExporter;
+
+public final class Ship implements Comparable<Ship>, BoardExporter
 {
 	private final static Logger logger = getLogger(Ship.class);
 	String name = "";
@@ -634,5 +638,10 @@ public final class Ship implements Comparable<Ship>
 		{
 			return species.compareTo(otherShip.getSpecies());
 		}
+	}
+
+	@Override
+	public void drawPDF(FileOutputStream fout, PDFWriterOptions options) throws IOException {
+		PDFShipWriter.drawPDF(this, fout, options);
 	}
 }

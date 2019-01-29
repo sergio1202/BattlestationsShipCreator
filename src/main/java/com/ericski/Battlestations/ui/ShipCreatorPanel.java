@@ -68,8 +68,8 @@ public class ShipCreatorPanel extends JPanel
 		JScrollPane shipscrollee = new JScrollPane(modulePanel);
 		shipscrollee.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		shipscrollee.setAutoscrolls(true);
-		shipscrollee.getVerticalScrollBar().setBlockIncrement(ModuleSelectionPanel.DEFAULTSIZE);
-		shipscrollee.getHorizontalScrollBar().setBlockIncrement(ModuleSelectionPanel.DEFAULTSIZE);
+		shipscrollee.getVerticalScrollBar().setBlockIncrement(SelectionPanel.DEFAULTSIZE);
+		shipscrollee.getHorizontalScrollBar().setBlockIncrement(SelectionPanel.DEFAULTSIZE);
 		mid.add(shipscrollee, BorderLayout.CENTER);
 
 		JPanel bottomHolder = new JPanel();
@@ -90,6 +90,10 @@ public class ShipCreatorPanel extends JPanel
 		add(new ModuleSelectorBar(), BorderLayout.WEST);
 		add(new StandardShipBar(this), BorderLayout.EAST);
 
+	}
+
+	public ShipCreatorPanel(BorderLayout borderLayout) {
+		super(borderLayout);
 	}
 
 	@Override
@@ -161,9 +165,9 @@ public class ShipCreatorPanel extends JPanel
 			ship.setNotes(shipNotes.getText());
 		}
 		ship.setSpecies(shipRegistry.getSelectedItem().toString());
-		for (ModuleSelectionPanel panel : modulePanel.getModulePanels())
+		for (SelectionPanel panel : modulePanel.getModulePanels())
 		{
-			Module module = panel.getModule();
+			Module module = (Module)panel.getMoveableItem();
 			int key = panel.getShipY() * 7 + panel.getShipX();
 			if (!module.isBlankModule())
 			{

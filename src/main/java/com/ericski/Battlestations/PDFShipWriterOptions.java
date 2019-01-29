@@ -6,7 +6,7 @@ import static java.util.prefs.Preferences.userNodeForPackage;
 import static org.apache.logging.log4j.LogManager.getLogger;
 import org.apache.logging.log4j.Logger;
 
-public class PDFShipWriterOptions
+public class PDFShipWriterOptions implements PDFWriterOptions 
 {
 	private static final Logger logger = getLogger(PDFShipWriterOptions.class);
 

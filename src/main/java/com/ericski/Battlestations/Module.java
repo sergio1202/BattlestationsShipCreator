@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import static org.apache.logging.log4j.LogManager.getLogger;
 import org.apache.logging.log4j.Logger;
 
-public abstract class Module implements Comparable<Module>, Cloneable
+public abstract class Module implements Comparable<Module>, Cloneable, MoveableItem
 {
 	static final Logger logger = getLogger(Module.class);
 	public final static String BLANK = "blank";

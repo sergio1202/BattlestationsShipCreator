@@ -35,6 +35,7 @@ public class InternalModule extends Module
 		{
 			try
 			{
+				//System.out.println("filename: " + fileName);
 				try (InputStream imageStream = getClass().getResourceAsStream(fileName))
 				{
 					Image img = read(imageStream);
@@ -55,5 +56,10 @@ public class InternalModule extends Module
 			}
 		}
 		return imageMap.get(name);
+	}
+
+	@Override
+	public boolean isBlankMoveableItem() {
+		return name == "blank";
 	}
 }
