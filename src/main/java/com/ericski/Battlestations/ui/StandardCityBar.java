@@ -159,7 +159,7 @@ public class StandardCityBar extends JPanel
 					Planet city = cityMap.get(ae.getActionCommand());
 					if (city != null)
 					{
-						cityCreatorPanel.setCity(new Planet(city));
+						cityCreatorPanel.setPlanet(new Planet(city));
 					}
 				}
 			});

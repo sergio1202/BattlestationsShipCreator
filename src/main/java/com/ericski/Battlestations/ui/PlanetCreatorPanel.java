@@ -23,7 +23,7 @@ public class PlanetCreatorPanel extends ShipCreatorPanel
 {
 	private static final long serialVersionUID = 1L;
 
-	JComboBox<String> cityTemplates;
+	JComboBox<String> planetTemplates;
 	JTextField planetName;
 	JComboBox<String> planetRegistry;
 	TileCreatorPanel tilePanel;
@@ -35,7 +35,7 @@ public class PlanetCreatorPanel extends ShipCreatorPanel
 
 		JPanel topHolder = new JPanel();
 		topHolder.setLayout(new GridLayout(2, 4, 1, 4));
-		topHolder.setBorder(BorderFactory.createTitledBorder("City Details"));
+		topHolder.setBorder(BorderFactory.createTitledBorder("Planet Details"));
 
 		topHolder.add(new JLabel("Name", JLabel.CENTER));
 		topHolder.add(planetName = new JTextField());
@@ -55,12 +55,12 @@ public class PlanetCreatorPanel extends ShipCreatorPanel
 		mid.add(topHolder, BorderLayout.NORTH);
 
 		tilePanel = new TileCreatorPanel();
-		JScrollPane cityscrollee = new JScrollPane(tilePanel);
-		cityscrollee.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-		cityscrollee.setAutoscrolls(true);
-		cityscrollee.getVerticalScrollBar().setBlockIncrement(SelectionPanel.DEFAULTSIZE);
-		cityscrollee.getHorizontalScrollBar().setBlockIncrement(SelectionPanel.DEFAULTSIZE);
-		mid.add(cityscrollee, BorderLayout.CENTER);
+		JScrollPane planetscrollee = new JScrollPane(tilePanel);
+		planetscrollee.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		planetscrollee.setAutoscrolls(true);
+		planetscrollee.getVerticalScrollBar().setBlockIncrement(PlanetSelectionPanel.DEFAULTSIZE);
+		planetscrollee.getHorizontalScrollBar().setBlockIncrement(PlanetSelectionPanel.DEFAULTSIZE);
+		mid.add(planetscrollee, BorderLayout.CENTER);
 
 		JPanel bottomHolder = new JPanel();
 		bottomHolder.setLayout(new BorderLayout());
@@ -88,20 +88,20 @@ public class PlanetCreatorPanel extends ShipCreatorPanel
 		return tilePanel.getMinimumSize();
 	}
 
-	public void setCity(final Planet cityToSet)
+	public void setPlanet(final Planet planetToSet)
 	{
 		SwingUtilities.invokeLater(new Runnable()
 		{
 			@Override
 			public void run()
 			{
-				planetNotes.setText(cityToSet.getNotesAsString());
-				planetName.setText(cityToSet.getName());
+				planetNotes.setText(planetToSet.getNotesAsString());
+				planetName.setText(planetToSet.getName());
 
 				boolean changed = false;
 				for (int i = 0; i < planetRegistry.getItemCount(); i++)
 				{
-					if (planetRegistry.getItemAt(i).equals(cityToSet.getSpecies()))
+					if (planetRegistry.getItemAt(i).equals(planetToSet.getSpecies()))
 					{
 						planetRegistry.setSelectedIndex(i);
 						changed = true;
@@ -110,10 +110,10 @@ public class PlanetCreatorPanel extends ShipCreatorPanel
 				}
 				if (!changed)
 				{
-					planetRegistry.addItem(cityToSet.getSpecies());
+					planetRegistry.addItem(planetToSet.getSpecies());
 					planetRegistry.setSelectedIndex(planetRegistry.getItemCount() - 1);
 				}
-				tilePanel.setModules(cityToSet);
+				tilePanel.setTiles(planetToSet);
 			}
 		});
 	}

@@ -9,6 +9,7 @@ import com.ericski.ui.ImageIconScalable;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -34,7 +35,7 @@ import javax.swing.JSeparator;
 
 public class PlanetSelectionPanel extends JPanel {
 
-	public static final int DEFAULTSIZE = 80 * 5;
+	public static final int DEFAULTSIZE = 50 * 5;
 	private static final boolean DEBUG = false;
 	private static final String IMAGEACTION = "IMAGEACTION";
 	private static final String DELETEACTION = "DELETE";
@@ -64,7 +65,7 @@ public class PlanetSelectionPanel extends JPanel {
 	private boolean showTooltip;
 	private JMenuItem nameItem;
 	private boolean showZoom = true;
-	private List<PlanetSelectionPanel> flipPanels = null;
+	// private List<PlanetSelectionPanel> flipPanels = null;
 
 	public MoveableItem getMoveableItem() {
 		return tile;
@@ -248,11 +249,8 @@ public class PlanetSelectionPanel extends JPanel {
 		}
 
 		/*
-		if (flipMenu == null) {
-			flipMenu = new JMenu("Flip Tile");
-		}
-		menu.add(flipMenu);
-		menu.add(new JSeparator());
+		 * if (flipMenu == null) { flipMenu = new JMenu("Flip Tile"); }
+		 * menu.add(flipMenu); menu.add(new JSeparator());
 		 */
 		JMenuItem rotateCW = new JMenuItem("Rotate Right");
 		rotateCW.setActionCommand(ROTATECWACTION);
@@ -328,12 +326,24 @@ public class PlanetSelectionPanel extends JPanel {
 	private void swap() {
 		PlanetSelectionPanel acteePanel = PlanetSelectionPanelActionController.getInstance().getActee();
 		PlanetSelectionPanel actorPanel = PlanetSelectionPanelActionController.getInstance().getActor();
-		MoveableItem temp = acteePanel.getMoveableItem();
+		
+		MoveableItem tempFront = acteePanel.getMoveableItem();
+		MoveableItem tempBack = acteePanel.flippedTile;
+		
+
+		//acteePanel.tile = actorPanel.tile;
 		acteePanel.setMoveableItem(actorPanel.getMoveableItem());
-		actorPanel.setMoveableItem(temp);
+		acteePanel.flippedTile = actorPanel.flippedTile;
+		//actorPanel.tile = tempFront;
+		actorPanel.setMoveableItem(tempFront);
+		actorPanel.flippedTile = tempBack;
+
+
 		PlanetSelectionPanelActionController.getInstance().clearAction();
 		getParent().repaint();
 	}
+	
+	
 
 	private void dragRotate(int x, int y) {
 		if (canRotate && (image != null)) {
@@ -395,10 +405,17 @@ public class PlanetSelectionPanel extends JPanel {
 
 	}
 
+	public void setTwoSidedMoveableItem(MoveableItem front, MoveableItem back) {
+		//this.tile = front;
+		this.flippedTile = back;
+		setMoveableItem(front);
+		//System.out.println("setting front to " + front.getDescription() + " back back to " + back.getDescription());
+	}
+
 	public void setMoveableItem(MoveableItem module) {
 		this.tile = module.copy();
 		updateFlipMenu();
-		flippedTile = null;
+		//flippedTile = null;
 
 		if (showTooltip) {
 			setToolTipText(module.getDescription());
@@ -431,14 +448,8 @@ public class PlanetSelectionPanel extends JPanel {
 			Graphics2D g2 = (Graphics2D) g;
 			g2.rotate(Math.toRadians(tile.getRotation()), width / 2, height / 2);
 			g2.drawImage(image, 0, 0, width, height, this);
-			if (tile.isUpgraded()) {
-				int x = getWidth() / 2 - 5;
-				int y = getHeight() / 2 - 5;
-				g2.setColor(Color.BLACK);
-				g2.drawString("UPG", x, y);
-				g2.setColor(Color.WHITE);
-				g2.drawString("UPG", x - 1, y - 1);
-			}
+			addDescription(g);
+
 			if (menu != null && canRotate) {
 				g2.setColor(Color.RED);
 				g2.drawRect(0, 0, width - 1, height - 1);
@@ -446,6 +457,18 @@ public class PlanetSelectionPanel extends JPanel {
 			}
 			g2.dispose();
 		}
+	}
+
+	private void addDescription(Graphics g) {
+		if (menu != null) {
+			g.setColor(Color.BLACK);
+			g.setFont(new Font("Serif", Font.PLAIN, 30));
+			g.drawString(tile.getDescription(), (getWidth() / 20) + 3, (getHeight() / 10) + 3);
+			g.setColor(Color.WHITE);
+			g.setFont(new Font("Serif", Font.PLAIN, 30));
+			g.drawString(tile.getDescription(), getWidth() / 20, getHeight() / 10);
+		}
+
 	}
 
 	@Override
@@ -522,22 +545,24 @@ public class PlanetSelectionPanel extends JPanel {
 		if (actorPanel == null) {
 			return;
 		}
-		MoveableItem flipPanel = actorPanel.getFlipPanel();
-		if (flipPanel != null) {
-			actorPanel.setMoveableItem(flipPanel);
+		MoveableItem back = actorPanel.getFlipTile();
+		if (back != null) {
+			//System.out.println("saving front " + back.getDescription());
+			MoveableItem front = tile;
+			//System.out.println("setting to " + back.getDescription());
+			actorPanel.setMoveableItem(back);
+			flippedTile = front;
 			PlanetSelectionPanelActionController.getInstance().clearAction();
 			getParent().repaint();
 			updateFlipMenu();
 		}
 	}
 
-	private MoveableItem getFlipPanel() {
+	private MoveableItem getFlipTile() {
 		// we're going to flip to the other side
 		MoveableItem flipTile = flippedTile;
-		// save current side to the other side
-		flippedTile = tile;
 		// if we had another side, return it
-		if(flipTile != null) {
+		if (flipTile != null) {
 			return flipTile;
 		}
 		// get the other side

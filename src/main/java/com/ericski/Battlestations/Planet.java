@@ -177,7 +177,7 @@ public final class Planet implements Comparable<Planet>, BoardExporter
 
 	public Document toDocument()
 	{
-		Element shipElement = new Element("Ship");
+		Element shipElement = new Element("Planet");
 		Document shipDocument = new Document(shipElement);
 		shipElement.setAttribute("name", name);
 		//shipElement.setAttribute("species", species);
@@ -201,11 +201,11 @@ public final class Planet implements Comparable<Planet>, BoardExporter
 			shipElement.addContent(notesElement);
 		}
 
-		Element modulesElement = new Element("Modules");
+		Element modulesElement = new Element("Tiles");
 		shipElement.addContent(modulesElement);
 		for (Entry<Integer, Tile> entry : tiles.entrySet())
 		{
-			Element moduleElement = new Element("Module");
+			Element moduleElement = new Element("Tile");
 			moduleElement.setAttribute("name", entry.getValue().getName());
 			moduleElement.setAttribute("rotation", Integer.toString(entry.getValue().getRotation()));
 			moduleElement.setAttribute("location", entry.getKey().toString());

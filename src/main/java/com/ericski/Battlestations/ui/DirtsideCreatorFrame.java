@@ -53,7 +53,7 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 
 	private static final long serialVersionUID = 1L;
 	
-	private PlanetCreatorPanel cityPanel;
+	private PlanetCreatorPanel planetPanel;
 
 	public DirtsideCreatorFrame()
 	{
@@ -66,9 +66,9 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 		}
 		JPanel contentPane = new JPanel(new BorderLayout());
 
-		cityPanel = new PlanetCreatorPanel();
+		planetPanel = new PlanetCreatorPanel();
 
-		contentPane.add(cityPanel, BorderLayout.CENTER);
+		contentPane.add(planetPanel, BorderLayout.CENTER);
 
 		// ImageIcon icon = new
 		// ImageIcon(getClass().getResource("/img/icon.gif"));
@@ -269,7 +269,7 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 
 		setContentPane(contentPane);
 		pack();
-		Dimension dim = new Dimension((int) toolBar.getPreferredSize().getWidth(), (int) cityPanel.getMinimumSize().getHeight());
+		Dimension dim = new Dimension((int) toolBar.getPreferredSize().getWidth(), (int) planetPanel.getMinimumSize().getHeight());
 		setMinimumSize(dim);
 
 		setLocationRelativeTo(null);
@@ -332,13 +332,13 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 			switch (action)
 			{
 				case NEWACTION:
-					cityPanel.setCity(new Planet());
+					planetPanel.setPlanet(new Planet());
 					break;
 				case SAVEACTION:
-					saveCity();
+					savePlanet();
 					break;
 				case LOADACTION:
-					loadCity();
+					loadPlanet();
 					break;
 				case EXPORTJPGACTION:
 					exportJPG();
@@ -356,7 +356,7 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 					view();
 					break;
 				case XMLVIEWACTION:
-					Planet city = cityPanel.generatePlanet();
+					Planet city = planetPanel.generatePlanet();
 					String text = city.toXML();
 					RawXmlDialog forumDialog = new RawXmlDialog(text, DirtsideCreatorFrame.this, "XML view", "Raw file view");
 					forumDialog.setVisible(true);
@@ -427,7 +427,7 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 	{
 		glassPane.setText("Printing");
 		glassPane.start();
-		PrintCityTask task = new PrintCityTask(this, cityPanel.generatePlanet(), glassPane, desktop);
+		PrintCityTask task = new PrintCityTask(this, planetPanel.generatePlanet(), glassPane, desktop);
 		task.execute();
 	}
 
@@ -435,30 +435,30 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 	{
 		glassPane.setText("Opening default viewer");
 		glassPane.start();
-		ViewCityTask task = new ViewCityTask(this, cityPanel.generatePlanet(), glassPane, desktop);
+		ViewCityTask task = new ViewCityTask(this, planetPanel.generatePlanet(), glassPane, desktop);
 		task.execute();
 	}
 
-	protected void saveCity()
+	protected void savePlanet()
 	{
-		glassPane.setText("Preparing to Save City");
+		glassPane.setText("Preparing to Save Planet");
 		glassPane.start();
 		JFileChooser saver = getFileChooser();
-		FileChooserExtensionFileFilter shipFilter = new FileChooserExtensionFileFilter(".ship", "City files");
-		saver.addChoosableFileFilter(shipFilter);
+		FileChooserExtensionFileFilter planetFilter = new FileChooserExtensionFileFilter(".planet", "Planet files");
+		saver.addChoosableFileFilter(planetFilter);
 		saver.setAcceptAllFileFilterUsed(false);
 		int result = saver.showSaveDialog(this);
 		if (result == JFileChooser.APPROVE_OPTION)
 		{
 			File f = saver.getSelectedFile();
 			setDirectory(f);
-			if (!f.getAbsolutePath().toLowerCase().endsWith(shipFilter.getExtension()))
+			if (!f.getAbsolutePath().toLowerCase().endsWith(planetFilter.getExtension()))
 			{
-				f = new File(f.getAbsolutePath() + shipFilter.getExtension());
+				f = new File(f.getAbsolutePath() + planetFilter.getExtension());
 			}
 			glassPane.setText("Saving");
 			glassPane.start();
-			SaveCityTask task = new SaveCityTask(this, cityPanel.generatePlanet(), f, glassPane);
+			SaveCityTask task = new SaveCityTask(this, planetPanel.generatePlanet(), f, glassPane);
 			task.execute();
 		}
 		else
@@ -488,7 +488,7 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 			{
 				jpgFile = new File(jpgFile.getAbsolutePath() + jpgFilter.getExtension());
 			}
-			ExportJPGTask task = new ExportJPGTask(this, cityPanel.generatePlanet(), jpgFile, glassPane);
+			ExportJPGTask task = new ExportJPGTask(this, planetPanel.generatePlanet(), jpgFile, glassPane);
 			task.execute();
 		}
 		else
@@ -517,7 +517,7 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 			{
 				file = new File(file.getAbsolutePath() + filter.getExtension());
 			}
-			ExportLargeTask task = new ExportLargeTask(this, cityPanel.generatePlanet(), file, glassPane);
+			ExportLargeTask task = new ExportLargeTask(this, planetPanel.generatePlanet(), file, glassPane);
 			task.execute();
 		}
 		else
@@ -545,7 +545,7 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 			{
 				pdfFile = new File(pdfFile.getAbsolutePath() + pdfFilter.getExtension());
 			}
-			ExportPDFTask task = new ExportPDFTask(this, cityPanel.generatePlanet(), pdfFile, glassPane);
+			ExportPDFTask task = new ExportPDFTask(this, planetPanel.generatePlanet(), pdfFile, glassPane);
 			task.execute();
 		}
 		else
@@ -555,13 +555,13 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 
 	}
 
-	protected void loadCity()
+	protected void loadPlanet()
 	{
-		glassPane.setText("Preparing to Load City");
+		glassPane.setText("Preparing to Load Planet");
 		glassPane.start();
 		JFileChooser loader = getFileChooser();
-		FileChooserExtensionFileFilter shipFilter = new FileChooserExtensionFileFilter(".ship", "City files");
-		loader.addChoosableFileFilter(shipFilter);
+		FileChooserExtensionFileFilter planetFilter = new FileChooserExtensionFileFilter(".planet", "Planet files");
+		loader.addChoosableFileFilter(planetFilter);
 		loader.setAcceptAllFileFilterUsed(false);
 		int result = loader.showOpenDialog(this);
 
@@ -569,13 +569,13 @@ public class DirtsideCreatorFrame extends ShipCreatorFrame
 		{
 			File f = loader.getSelectedFile();
 			setDirectory(f);
-			if (!f.getAbsolutePath().toLowerCase().endsWith(shipFilter.getExtension()))
+			if (!f.getAbsolutePath().toLowerCase().endsWith(planetFilter.getExtension()))
 			{
-				f = new File(f.getAbsolutePath() + shipFilter.getExtension());
+				f = new File(f.getAbsolutePath() + planetFilter.getExtension());
 			}
 			glassPane.setText("Loading");
 			glassPane.start();
-			LoadCityTask task = new LoadCityTask(this, cityPanel, f, glassPane);
+			LoadPlanetTask task = new LoadPlanetTask(this, planetPanel, f, glassPane);
 			task.execute();
 		}
 		else
@@ -697,19 +697,19 @@ class SaveCityTask extends SwingWorker<Void, Void>
 	}
 }
 
-class LoadCityTask extends SwingWorker<Void, Void>
+class LoadPlanetTask extends SwingWorker<Void, Void>
 {
 	private static final Logger logger = LogManager.getLogger(DirtsideCreatorFrame.class);
-	PlanetCreatorPanel shipPanel;
+	PlanetCreatorPanel planetPanel;
 	JFrame parent;
-	File shipFile;
+	File planetFile;
 	InfiniteProgressPanel progressPanel;
 
-	public LoadCityTask(JFrame parent, PlanetCreatorPanel shipPanel, File shipFile, InfiniteProgressPanel progressPanel)
+	public LoadPlanetTask(JFrame parent, PlanetCreatorPanel planetPanel, File planetFile, InfiniteProgressPanel progressPanel)
 	{
 		this.parent = parent;
-		this.shipPanel = shipPanel;
-		this.shipFile = shipFile;
+		this.planetPanel = planetPanel;
+		this.planetFile = planetFile;
 		this.progressPanel = progressPanel;
 	}
 
@@ -721,7 +721,7 @@ class LoadCityTask extends SwingWorker<Void, Void>
 			//
 			// load ship
 			//
-			BufferedReader br = new BufferedReader(new FileReader(shipFile));
+			BufferedReader br = new BufferedReader(new FileReader(planetFile));
 			String line;
 			StringBuilder sb = new StringBuilder(1024);
 			while ((line = br.readLine()) != null)
@@ -729,10 +729,10 @@ class LoadCityTask extends SwingWorker<Void, Void>
 				sb.append(line);
 			}
 			br.close();
-			Planet ship = Planet.fromXML(sb.toString());
-			shipPanel.setCity(ship);
+			Planet planet = Planet.fromXML(sb.toString());
+			planetPanel.setPlanet(planet);
 			progressPanel.stop();
-			JOptionPane.showMessageDialog(parent, "City Loaded", "Success", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(parent, "Planet Loaded", "Success", JOptionPane.INFORMATION_MESSAGE);
 		}
 		catch (IOException | HeadlessException ex)
 		{

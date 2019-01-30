@@ -13,6 +13,8 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javafx.util.Pair;
+
 public enum TileFactory {
 	INSTANCE;
 
@@ -21,6 +23,7 @@ public enum TileFactory {
 	private final Set<String> tileType;
 	private File userDir;
 	private Map<String, Set<String>> flipMap;
+	private ArrayList<Pair<String, String>> availableTiles;
 
 	private TileFactory() {
 		logger = LogManager.getLogger(TileFactory.class);
@@ -28,7 +31,7 @@ public enum TileFactory {
 		tileType = new HashSet<>();
 		userDir = getTileDirectory();
 		flipMap = new HashMap<>();
-
+		availableTiles = new ArrayList<Pair<String, String>>();
 		addTile("A", "A1", "tiles");
 		addTile("lowercase_a_", "A2", "tiles");
 		addTile("B", "B1", "tiles");
@@ -61,8 +64,13 @@ public enum TileFactory {
 		
 		//System.out.println(flipMap);
 	}
+	
+	public List<Pair<String, String>> getAvailableTiles() {
+		return availableTiles;
+	}
 
 	private void addFlipTile(String a, String b) {
+		availableTiles.add(new Pair<String, String>(a, b));
 		if (!flipMap.containsKey(a)) {
 			flipMap.put(a, new HashSet<String>());
 		}
